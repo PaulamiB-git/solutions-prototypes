@@ -200,3 +200,4 @@
 0731. 🎨 style: standardize quote style
 0856. 🐛 fix: fix null pointer exception on login
 0596. ♻️ chore: update .gitignore
+0487. 🎨 style: reformat files with black
