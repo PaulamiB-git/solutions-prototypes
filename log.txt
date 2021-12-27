@@ -202,3 +202,4 @@
 0596. ♻️ chore: update .gitignore
 0487. 🎨 style: reformat files with black
 0410. 🎨 style: reformat files with black
+0150. 🎨 style: remove trailing whitespace
