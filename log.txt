@@ -208,3 +208,4 @@
 0497. 🔧 refactor: refactor quiz grading logic
 0750. 🎨 style: apply consistent indentation
 0850. ♻️ chore: rename env.example
+0080. ✨ feat: support email verification
