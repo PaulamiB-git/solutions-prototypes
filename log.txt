@@ -210,3 +210,4 @@
 0850. ♻️ chore: rename env.example
 0080. ✨ feat: support email verification
 0787. ♻️ chore: rename env.example
+0636. ✅ test: increase coverage on auth module
