@@ -2,3 +2,4 @@
 0935. 📚 docs: update README with setup steps
 0645. 🐛 fix: resolve issue with date parsing
 0779. 🔧 refactor: organize models into subfolders
+0300. ✨ feat: add export to CSV option
