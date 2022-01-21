@@ -218,3 +218,4 @@
 0992. ♻️ chore: clean up unused files
 0576. ♻️ chore: update .gitignore
 0900. 🐛 fix: handle 500 error in quiz API
+0617. ✨ feat: support email verification
