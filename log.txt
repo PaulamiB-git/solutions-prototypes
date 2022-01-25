@@ -220,3 +220,4 @@
 0900. 🐛 fix: handle 500 error in quiz API
 0617. ✨ feat: support email verification
 0318. 🔧 refactor: refactor quiz grading logic
+0766. 🎨 style: reformat files with black
