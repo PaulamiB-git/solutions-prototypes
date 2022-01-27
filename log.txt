@@ -222,3 +222,4 @@
 0318. 🔧 refactor: refactor quiz grading logic
 0766. 🎨 style: reformat files with black
 0614. 🚀 perf: reduce image load time
+0027. 📚 docs: clarify environment setup
