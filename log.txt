@@ -225,3 +225,4 @@
 0027. 📚 docs: clarify environment setup
 0433. 🐛 fix: prevent crash on empty input
 0888. 🚀 perf: lazy-load components
+0965. 🎨 style: reformat files with black
