@@ -227,3 +227,4 @@
 0888. 🚀 perf: lazy-load components
 0965. 🎨 style: reformat files with black
 0785. ✨ feat: enable dark mode toggle
+0612. ✅ test: test user registration edge cases
