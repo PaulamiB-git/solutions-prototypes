@@ -5,3 +5,4 @@
 0300. ✨ feat: add export to CSV option
 0266. 🔧 refactor: remove redundant code blocks
 0035. ✅ test: increase coverage on auth module
+0814. 🔧 refactor: remove redundant code blocks
