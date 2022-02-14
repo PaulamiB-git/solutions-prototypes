@@ -241,3 +241,4 @@
 0698. 🐛 fix: handle 500 error in quiz API
 0991. ♻️ chore: clean up unused files
 0688. 🚀 perf: reduce image load time
+0232. 🎨 style: apply consistent indentation
