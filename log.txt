@@ -246,3 +246,4 @@
 0296. 🔧 refactor: organize models into subfolders
 0898. 🐛 fix: fix broken CSS in mobile view
 0798. 🚀 perf: reduce image load time
+0185. 📚 docs: write FAQ section
