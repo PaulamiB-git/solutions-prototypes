@@ -247,3 +247,4 @@
 0898. 🐛 fix: fix broken CSS in mobile view
 0798. 🚀 perf: reduce image load time
 0185. 📚 docs: write FAQ section
+0265. 🎨 style: reformat files with black
