@@ -248,3 +248,4 @@
 0798. 🚀 perf: reduce image load time
 0185. 📚 docs: write FAQ section
 0265. 🎨 style: reformat files with black
+0782. 📚 docs: improve code comments in utils
