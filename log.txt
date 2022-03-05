@@ -7,3 +7,4 @@
 0035. ✅ test: increase coverage on auth module
 0814. 🔧 refactor: remove redundant code blocks
 0140. 🐛 fix: handle 500 error in quiz API
+0013. ✅ test: increase coverage on auth module
