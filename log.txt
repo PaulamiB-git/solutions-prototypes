@@ -261,3 +261,4 @@
 0422. 🔧 refactor: organize models into subfolders
 0504. 📚 docs: document token refresh logic
 0446. 🎨 style: apply consistent indentation
+0319. 🐛 fix: handle 500 error in quiz API
