@@ -10,3 +10,4 @@
 0013. ✅ test: increase coverage on auth module
 0009. ✨ feat: enable dark mode toggle
 0084. 🐛 fix: handle 500 error in quiz API
+0128. ♻️ chore: rename env.example
