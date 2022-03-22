@@ -273,3 +273,4 @@
 0483. 📚 docs: update README with setup steps
 0806. 📚 docs: improve code comments in utils
 0078. ♻️ chore: update .gitignore
+0776. ✅ test: add integration test for /submit endpoint
