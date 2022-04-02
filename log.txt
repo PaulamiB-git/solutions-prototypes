@@ -11,3 +11,4 @@
 0009. ✨ feat: enable dark mode toggle
 0084. 🐛 fix: handle 500 error in quiz API
 0128. ♻️ chore: rename env.example
+0623. 🎨 style: standardize quote style
