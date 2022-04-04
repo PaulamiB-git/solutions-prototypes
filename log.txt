@@ -282,3 +282,4 @@
 0756. ✨ feat: support email verification
 0848. 📚 docs: update README with setup steps
 0713. 🐛 fix: handle 500 error in quiz API
+0208. 🔧 refactor: clean up auth middleware
