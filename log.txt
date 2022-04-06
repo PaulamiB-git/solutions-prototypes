@@ -13,3 +13,4 @@
 0128. ♻️ chore: rename env.example
 0623. 🎨 style: standardize quote style
 0925. ✨ feat: add export to CSV option
+0988. 🐛 fix: fix broken CSS in mobile view
