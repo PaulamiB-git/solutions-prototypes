@@ -285,3 +285,4 @@
 0208. 🔧 refactor: clean up auth middleware
 0777. 📚 docs: document token refresh logic
 0477. 🐛 fix: fix broken CSS in mobile view
+0827. 🚀 perf: optimize database query for quiz results
