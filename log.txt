@@ -287,3 +287,4 @@
 0477. 🐛 fix: fix broken CSS in mobile view
 0827. 🚀 perf: optimize database query for quiz results
 0178. ✨ feat: support email verification
+0973. 🔧 refactor: organize models into subfolders
