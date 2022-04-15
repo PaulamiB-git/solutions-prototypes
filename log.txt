@@ -289,3 +289,4 @@
 0178. ✨ feat: support email verification
 0973. 🔧 refactor: organize models into subfolders
 0602. 🔧 refactor: remove redundant code blocks
+0697. ♻️ chore: bump dependencies
