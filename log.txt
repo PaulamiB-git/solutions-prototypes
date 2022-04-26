@@ -295,3 +295,4 @@
 0615. 🐛 fix: correct typo in registration form
 0919. 🚀 perf: optimize database query for quiz results
 0406. ✨ feat: add export to CSV option
+0288. 🔧 refactor: refactor quiz grading logic
