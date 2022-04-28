@@ -16,3 +16,4 @@
 0988. 🐛 fix: fix broken CSS in mobile view
 0335. ♻️ chore: update .gitignore
 0928. 🎨 style: apply consistent indentation
+0673. 🐛 fix: correct typo in registration form
