@@ -301,3 +301,4 @@
 0271. ✅ test: add unit test for quiz service
 0885. ♻️ chore: update .gitignore
 0299. 🐛 fix: resolve issue with date parsing
+0113. ✨ feat: add user authentication
