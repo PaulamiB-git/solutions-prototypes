@@ -302,3 +302,4 @@
 0885. ♻️ chore: update .gitignore
 0299. 🐛 fix: resolve issue with date parsing
 0113. ✨ feat: add user authentication
+0759. 🔧 refactor: organize models into subfolders
