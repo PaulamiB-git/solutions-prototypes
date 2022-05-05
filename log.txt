@@ -303,3 +303,4 @@
 0299. 🐛 fix: resolve issue with date parsing
 0113. ✨ feat: add user authentication
 0759. 🔧 refactor: organize models into subfolders
+0603. 🐛 fix: fix broken CSS in mobile view
