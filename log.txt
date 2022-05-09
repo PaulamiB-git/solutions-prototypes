@@ -307,3 +307,4 @@
 0722. 📚 docs: add API usage examples
 0070. ✨ feat: implement quiz timer feature
 0954. 🚀 perf: cache repeated calculations
+0312. ✨ feat: add user authentication
