@@ -310,3 +310,4 @@
 0312. ✨ feat: add user authentication
 0126. 🎨 style: rename variables for clarity
 0912. 📚 docs: document token refresh logic
+0564. 📚 docs: clarify environment setup
