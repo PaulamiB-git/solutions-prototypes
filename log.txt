@@ -317,3 +317,4 @@
 0172. 📚 docs: add API usage examples
 0976. ✨ feat: implement quiz timer feature
 0104. 🎨 style: apply consistent indentation
+0307. ✨ feat: support email verification
