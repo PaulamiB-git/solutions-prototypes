@@ -320,3 +320,4 @@
 0307. ✨ feat: support email verification
 0638. 📚 docs: improve code comments in utils
 0905. ♻️ chore: bump dependencies
+0292. 📚 docs: clarify environment setup
