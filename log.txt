@@ -20,3 +20,4 @@
 0439. 🐛 fix: correct typo in registration form
 0305. ✨ feat: enable dark mode toggle
 0078. ♻️ chore: update .gitignore
+0392. 🎨 style: remove trailing whitespace
