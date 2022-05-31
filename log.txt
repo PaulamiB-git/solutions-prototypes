@@ -328,3 +328,4 @@
 0597. 🚀 perf: cache repeated calculations
 0071. 🔧 refactor: refactor quiz grading logic
 0145. 📚 docs: improve code comments in utils
+0702. ✨ feat: add user authentication
