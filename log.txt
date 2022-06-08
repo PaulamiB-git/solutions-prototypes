@@ -21,3 +21,4 @@
 0305. ✨ feat: enable dark mode toggle
 0078. ♻️ chore: update .gitignore
 0392. 🎨 style: remove trailing whitespace
+0990. ♻️ chore: rename env.example
