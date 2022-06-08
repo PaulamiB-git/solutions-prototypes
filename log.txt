@@ -335,3 +335,4 @@
 0076. 🎨 style: reformat files with black
 0498. ✅ test: mock database connection in test suite
 0428. 🐛 fix: fix null pointer exception on login
+0972. 🔧 refactor: refactor quiz grading logic
