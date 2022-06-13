@@ -22,3 +22,4 @@
 0078. ♻️ chore: update .gitignore
 0392. 🎨 style: remove trailing whitespace
 0990. ♻️ chore: rename env.example
+0644. 🎨 style: apply consistent indentation
