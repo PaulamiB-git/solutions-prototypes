@@ -339,3 +339,4 @@
 0417. 🎨 style: rename variables for clarity
 0121. ✨ feat: support email verification
 0512. 🚀 perf: reduce image load time
+0081. 🐛 fix: fix null pointer exception on login
