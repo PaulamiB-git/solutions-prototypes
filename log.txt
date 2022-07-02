@@ -349,3 +349,4 @@
 0482. ✨ feat: add export to CSV option
 0641. 📚 docs: write FAQ section
 0587. 🔧 refactor: remove redundant code blocks
+0100. ♻️ chore: update .gitignore
