@@ -357,3 +357,4 @@
 0819. 🚀 perf: reduce image load time
 0118. 🚀 perf: reduce image load time
 0969. ✨ feat: create admin dashboard
+0349. ✅ test: increase coverage on auth module
