@@ -359,3 +359,4 @@
 0969. ✨ feat: create admin dashboard
 0349. ✅ test: increase coverage on auth module
 0101. 📚 docs: clarify environment setup
+0426. ✅ test: add integration test for /submit endpoint
