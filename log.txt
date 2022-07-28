@@ -368,3 +368,4 @@
 0907. 🔧 refactor: split large controller into smaller functions
 0712. 🎨 style: apply consistent indentation
 0028. 🎨 style: standardize quote style
+0012. 🚀 perf: cache repeated calculations
