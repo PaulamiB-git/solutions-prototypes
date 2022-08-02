@@ -371,3 +371,4 @@
 0012. 🚀 perf: cache repeated calculations
 0916. ♻️ chore: bump dependencies
 0924. ✅ test: mock database connection in test suite
+0803. ✅ test: mock database connection in test suite
