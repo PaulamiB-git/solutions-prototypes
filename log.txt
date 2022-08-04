@@ -373,3 +373,4 @@
 0924. ✅ test: mock database connection in test suite
 0803. ✅ test: mock database connection in test suite
 0662. ♻️ chore: clean up unused files
+0387. ✨ feat: enable dark mode toggle
