@@ -379,3 +379,4 @@
 0674. 🔧 refactor: split large controller into smaller functions
 0739. 🎨 style: remove trailing whitespace
 0095. ✅ test: mock database connection in test suite
+0542. 🔧 refactor: organize models into subfolders
