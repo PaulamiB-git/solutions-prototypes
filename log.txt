@@ -384,3 +384,4 @@
 0180. ✨ feat: add export to CSV option
 0158. 📚 docs: clarify environment setup
 0479. 🐛 fix: fix null pointer exception on login
+0484. 🐛 fix: handle 500 error in quiz API
