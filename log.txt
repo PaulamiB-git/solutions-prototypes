@@ -386,3 +386,4 @@
 0479. 🐛 fix: fix null pointer exception on login
 0484. 🐛 fix: handle 500 error in quiz API
 0023. 📚 docs: clarify environment setup
+0066. 🔧 refactor: clean up auth middleware
