@@ -388,3 +388,4 @@
 0023. 📚 docs: clarify environment setup
 0066. 🔧 refactor: clean up auth middleware
 0298. ♻️ chore: update .gitignore
+0507. 🔧 refactor: clean up auth middleware
