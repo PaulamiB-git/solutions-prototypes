@@ -391,3 +391,4 @@
 0507. 🔧 refactor: clean up auth middleware
 0784. ♻️ chore: clean up unused files
 0360. ✨ feat: add export to CSV option
+0258. 🐛 fix: prevent crash on empty input
