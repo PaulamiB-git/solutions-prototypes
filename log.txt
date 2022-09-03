@@ -395,3 +395,4 @@
 0109. 🚀 perf: lazy-load components
 0893. 🐛 fix: handle 500 error in quiz API
 0444. ✅ test: add unit test for quiz service
+0160. ♻️ chore: bump dependencies
