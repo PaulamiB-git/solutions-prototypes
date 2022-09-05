@@ -398,3 +398,4 @@
 0160. ♻️ chore: bump dependencies
 0695. ✨ feat: create admin dashboard
 0842. 🎨 style: remove trailing whitespace
+0908. ♻️ chore: bump dependencies
