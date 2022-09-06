@@ -30,3 +30,4 @@
 0862. ♻️ chore: bump dependencies
 0573. ✅ test: add integration test for /submit endpoint
 0374. 🎨 style: standardize quote style
+0186. ✅ test: test user registration edge cases
