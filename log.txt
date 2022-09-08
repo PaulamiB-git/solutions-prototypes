@@ -31,3 +31,4 @@
 0573. ✅ test: add integration test for /submit endpoint
 0374. 🎨 style: standardize quote style
 0186. ✅ test: test user registration edge cases
+0021. ✨ feat: support email verification
