@@ -32,3 +32,4 @@
 0374. 🎨 style: standardize quote style
 0186. ✅ test: test user registration edge cases
 0021. ✨ feat: support email verification
+0341. 🚀 perf: lazy-load components
