@@ -405,3 +405,4 @@
 0351. ✨ feat: add export to CSV option
 0378. 🐛 fix: prevent crash on empty input
 0295. 🎨 style: remove trailing whitespace
+0700. 🎨 style: rename variables for clarity
