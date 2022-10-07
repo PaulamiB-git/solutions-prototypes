@@ -412,3 +412,4 @@
 0771. 🚀 perf: cache repeated calculations
 0673. 🐛 fix: correct typo in registration form
 0088. 📚 docs: add API usage examples
+0588. 🔧 refactor: organize models into subfolders
