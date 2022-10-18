@@ -418,3 +418,4 @@
 0450. 🐛 fix: fix broken CSS in mobile view
 0745. ✅ test: add unit test for quiz service
 0149. ✨ feat: add export to CSV option
+0525. ✅ test: mock database connection in test suite
