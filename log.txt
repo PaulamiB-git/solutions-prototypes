@@ -421,3 +421,4 @@
 0525. ✅ test: mock database connection in test suite
 0681. ✨ feat: create admin dashboard
 0230. ✨ feat: create admin dashboard
+0039. ✅ test: add integration test for /submit endpoint
