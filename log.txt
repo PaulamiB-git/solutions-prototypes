@@ -431,3 +431,4 @@
 0452. ✨ feat: implement quiz timer feature
 0867. 🔧 refactor: refactor quiz grading logic
 0877. 🚀 perf: optimize database query for quiz results
+0535. 📚 docs: write FAQ section
