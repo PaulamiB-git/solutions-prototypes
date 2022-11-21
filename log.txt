@@ -35,3 +35,4 @@
 0341. 🚀 perf: lazy-load components
 0143. ✨ feat: implement quiz timer feature
 0469. 🚀 perf: lazy-load components
+0611. ✅ test: test user registration edge cases
