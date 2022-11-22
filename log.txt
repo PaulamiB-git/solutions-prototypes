@@ -440,3 +440,4 @@
 0223. 🔧 refactor: remove redundant code blocks
 0650. ✅ test: add unit test for quiz service
 0079. 🐛 fix: correct typo in registration form
+0206. 🐛 fix: handle 500 error in quiz API
