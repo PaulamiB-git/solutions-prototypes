@@ -441,3 +441,4 @@
 0650. ✅ test: add unit test for quiz service
 0079. 🐛 fix: correct typo in registration form
 0206. 🐛 fix: handle 500 error in quiz API
+0940. 📚 docs: document token refresh logic
