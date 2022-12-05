@@ -447,3 +447,4 @@
 0379. ✨ feat: support email verification
 0176. 🔧 refactor: remove redundant code blocks
 0786. ✨ feat: enable dark mode toggle
+0373. 📚 docs: document token refresh logic
