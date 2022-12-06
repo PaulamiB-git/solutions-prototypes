@@ -448,3 +448,4 @@
 0176. 🔧 refactor: remove redundant code blocks
 0786. ✨ feat: enable dark mode toggle
 0373. 📚 docs: document token refresh logic
+0880. 🐛 fix: fix broken CSS in mobile view
