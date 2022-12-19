@@ -39,3 +39,4 @@
 0403. ✅ test: mock database connection in test suite
 0614. 🚀 perf: reduce image load time
 0861. ♻️ chore: clean up unused files
+0268. 🐛 fix: prevent crash on empty input
