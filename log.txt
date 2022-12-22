@@ -464,3 +464,4 @@
 0989. 📚 docs: write FAQ section
 0854. ♻️ chore: rename env.example
 0197. 📚 docs: update README with setup steps
+0866. 📚 docs: add API usage examples
