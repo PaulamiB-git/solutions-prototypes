@@ -475,3 +475,4 @@
 0861. ♻️ chore: clean up unused files
 0930. 🎨 style: apply consistent indentation
 0348. ✅ test: test user registration edge cases
+0376. 🎨 style: apply consistent indentation
