@@ -42,3 +42,4 @@
 0268. 🐛 fix: prevent crash on empty input
 0449. ✅ test: add unit test for quiz service
 0960. ✅ test: increase coverage on auth module
+0576. ♻️ chore: update .gitignore
