@@ -486,3 +486,4 @@
 0341. 🚀 perf: lazy-load components
 0970. ♻️ chore: update .gitignore
 0694. 🎨 style: rename variables for clarity
+0563. 📚 docs: clarify environment setup
