@@ -488,3 +488,4 @@
 0694. 🎨 style: rename variables for clarity
 0563. 📚 docs: clarify environment setup
 0310. 🔧 refactor: refactor quiz grading logic
+0746. ♻️ chore: add GitHub actions badge
