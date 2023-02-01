@@ -489,3 +489,4 @@
 0563. 📚 docs: clarify environment setup
 0310. 🔧 refactor: refactor quiz grading logic
 0746. ♻️ chore: add GitHub actions badge
+0390. 🎨 style: standardize quote style
