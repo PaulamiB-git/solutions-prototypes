@@ -44,3 +44,4 @@
 0960. ✅ test: increase coverage on auth module
 0576. ♻️ chore: update .gitignore
 0705. 🔧 refactor: refactor quiz grading logic
+0975. 🎨 style: apply consistent indentation
