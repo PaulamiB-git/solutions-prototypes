@@ -45,3 +45,4 @@
 0576. ♻️ chore: update .gitignore
 0705. 🔧 refactor: refactor quiz grading logic
 0975. 🎨 style: apply consistent indentation
+0181. ♻️ chore: add GitHub actions badge
