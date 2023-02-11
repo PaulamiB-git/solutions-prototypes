@@ -47,3 +47,4 @@
 0975. 🎨 style: apply consistent indentation
 0181. ♻️ chore: add GitHub actions badge
 0441. 📚 docs: add API usage examples
+0800. 🚀 perf: optimize database query for quiz results
