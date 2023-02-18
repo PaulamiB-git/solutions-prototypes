@@ -498,3 +498,4 @@
 0346. ✅ test: mock database connection in test suite
 0527. 🎨 style: remove trailing whitespace
 0394. 🚀 perf: lazy-load components
+0627. 📚 docs: document token refresh logic
