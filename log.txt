@@ -499,3 +499,4 @@
 0527. 🎨 style: remove trailing whitespace
 0394. 🚀 perf: lazy-load components
 0627. 📚 docs: document token refresh logic
+0751. 🐛 fix: handle 500 error in quiz API
