@@ -502,3 +502,4 @@
 0751. 🐛 fix: handle 500 error in quiz API
 0942. ✅ test: increase coverage on auth module
 0495. 🔧 refactor: remove redundant code blocks
+0231. 🔧 refactor: clean up auth middleware
