@@ -506,3 +506,4 @@
 0748. 🚀 perf: optimize database query for quiz results
 0554. 📚 docs: improve code comments in utils
 0967. ♻️ chore: add GitHub actions badge
+0934. ✨ feat: support email verification
