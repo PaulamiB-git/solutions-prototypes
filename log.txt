@@ -510,3 +510,4 @@
 0471. ✨ feat: support email verification
 0816. 🔧 refactor: organize models into subfolders
 0073. 🔧 refactor: split large controller into smaller functions
+0683. ✅ test: mock database connection in test suite
