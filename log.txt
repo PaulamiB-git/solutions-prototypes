@@ -52,3 +52,4 @@
 0134. ✨ feat: implement quiz timer feature
 0008. 🚀 perf: reduce image load time
 0453. 🎨 style: standardize quote style
+0039. ✅ test: add integration test for /submit endpoint
