@@ -531,3 +531,4 @@
 0521. 🎨 style: standardize quote style
 0548. 📚 docs: write FAQ section
 0058. ♻️ chore: add GitHub actions badge
+0742. 📚 docs: clarify environment setup
