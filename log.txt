@@ -529,3 +529,4 @@
 0060. ♻️ chore: clean up unused files
 0311. 🎨 style: apply consistent indentation
 0521. 🎨 style: standardize quote style
+0548. 📚 docs: write FAQ section
