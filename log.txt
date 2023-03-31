@@ -530,3 +530,4 @@
 0311. 🎨 style: apply consistent indentation
 0521. 🎨 style: standardize quote style
 0548. 📚 docs: write FAQ section
+0058. ♻️ chore: add GitHub actions badge
