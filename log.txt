@@ -535,3 +535,4 @@
 0672. 🐛 fix: fix broken CSS in mobile view
 0534. 🔧 refactor: split large controller into smaller functions
 0556. ✨ feat: support email verification
+0430. 🐛 fix: fix null pointer exception on login
