@@ -538,3 +538,4 @@
 0430. 🐛 fix: fix null pointer exception on login
 0290. ✅ test: test user registration edge cases
 0875. ✅ test: increase coverage on auth module
+0420. 🚀 perf: reduce image load time
