@@ -545,3 +545,4 @@
 0873. 🚀 perf: cache repeated calculations
 0685. ✅ test: test user registration edge cases
 0592. 📚 docs: add API usage examples
+0218. 🔧 refactor: clean up auth middleware
