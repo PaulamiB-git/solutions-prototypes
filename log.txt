@@ -547,3 +547,4 @@
 0592. 📚 docs: add API usage examples
 0218. 🔧 refactor: clean up auth middleware
 0405. ✅ test: mock database connection in test suite
+0021. ✨ feat: support email verification
