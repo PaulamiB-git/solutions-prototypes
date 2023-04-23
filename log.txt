@@ -549,3 +549,4 @@
 0405. ✅ test: mock database connection in test suite
 0021. ✨ feat: support email verification
 0851. ✅ test: mock database connection in test suite
+0187. ✨ feat: support email verification
