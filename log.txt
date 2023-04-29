@@ -551,3 +551,4 @@
 0851. ✅ test: mock database connection in test suite
 0187. ✨ feat: support email verification
 0211. 🔧 refactor: remove redundant code blocks
+0111. 📚 docs: update README with setup steps
