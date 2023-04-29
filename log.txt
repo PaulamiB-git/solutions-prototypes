@@ -55,3 +55,4 @@
 0039. ✅ test: add integration test for /submit endpoint
 0252. 🎨 style: remove trailing whitespace
 0204. 🎨 style: standardize quote style
+0054. ♻️ chore: update .gitignore
