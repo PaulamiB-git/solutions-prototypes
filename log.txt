@@ -552,3 +552,4 @@
 0187. ✨ feat: support email verification
 0211. 🔧 refactor: remove redundant code blocks
 0111. 📚 docs: update README with setup steps
+0589. 🐛 fix: fix broken CSS in mobile view
