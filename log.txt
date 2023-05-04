@@ -555,3 +555,4 @@
 0589. 🐛 fix: fix broken CSS in mobile view
 0795. 📚 docs: update README with setup steps
 0007. 🎨 style: rename variables for clarity
+0528. ♻️ chore: clean up unused files
