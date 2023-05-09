@@ -559,3 +559,4 @@
 0284. ✨ feat: implement quiz timer feature
 0331. 🐛 fix: fix broken CSS in mobile view
 0082. 🔧 refactor: refactor quiz grading logic
+0159. 🚀 perf: lazy-load components
