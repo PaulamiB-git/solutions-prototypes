@@ -56,3 +56,4 @@
 0252. 🎨 style: remove trailing whitespace
 0204. 🎨 style: standardize quote style
 0054. ♻️ chore: update .gitignore
+0398. 🚀 perf: cache repeated calculations
