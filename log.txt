@@ -563,3 +563,4 @@
 0221. ✨ feat: add user authentication
 0957. 🐛 fix: fix null pointer exception on login
 0689. 🎨 style: reformat files with black
+0313. 🎨 style: apply consistent indentation
