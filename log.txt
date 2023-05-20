@@ -567,3 +567,4 @@
 0788. 📚 docs: add API usage examples
 0639. 🐛 fix: correct typo in registration form
 0608. 🔧 refactor: remove redundant code blocks
+0467. ✅ test: add integration test for /submit endpoint
