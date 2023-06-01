@@ -571,3 +571,4 @@
 0516. ✅ test: add unit test for quiz service
 0974. ✨ feat: add export to CSV option
 0953. 🎨 style: remove trailing whitespace
+0844. 📚 docs: update README with setup steps
