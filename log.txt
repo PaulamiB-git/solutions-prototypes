@@ -575,3 +575,4 @@
 0269. ✅ test: test user registration edge cases
 0818. 🔧 refactor: remove redundant code blocks
 0610. 🚀 perf: lazy-load components
+0514. 🐛 fix: fix broken CSS in mobile view
