@@ -578,3 +578,4 @@
 0514. 🐛 fix: fix broken CSS in mobile view
 0278. 🔧 refactor: clean up auth middleware
 0414. 🔧 refactor: remove redundant code blocks
+0485. 📚 docs: update README with setup steps
