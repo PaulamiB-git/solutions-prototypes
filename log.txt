@@ -581,3 +581,4 @@
 0485. 📚 docs: update README with setup steps
 0464. 🎨 style: remove trailing whitespace
 0256. ✅ test: mock database connection in test suite
+0035. ✅ test: increase coverage on auth module
