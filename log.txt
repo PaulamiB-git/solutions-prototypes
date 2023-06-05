@@ -582,3 +582,4 @@
 0464. 🎨 style: remove trailing whitespace
 0256. ✅ test: mock database connection in test suite
 0035. ✅ test: increase coverage on auth module
+0981. 🚀 perf: lazy-load components
