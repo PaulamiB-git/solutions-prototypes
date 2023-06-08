@@ -62,3 +62,4 @@
 0129. 🔧 refactor: organize models into subfolders
 0271. ✅ test: add unit test for quiz service
 0992. ♻️ chore: clean up unused files
+0359. 🔧 refactor: clean up auth middleware
