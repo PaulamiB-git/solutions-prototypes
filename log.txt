@@ -586,3 +586,4 @@
 0336. ✨ feat: add export to CSV option
 0577. ✨ feat: implement quiz timer feature
 0599. ✅ test: test user registration edge cases
+0383. 🐛 fix: fix broken CSS in mobile view
