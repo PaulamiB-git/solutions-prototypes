@@ -585,3 +585,4 @@
 0981. 🚀 perf: lazy-load components
 0336. ✨ feat: add export to CSV option
 0577. ✨ feat: implement quiz timer feature
+0599. ✅ test: test user registration edge cases
