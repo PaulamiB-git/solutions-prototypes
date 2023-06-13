@@ -588,3 +588,4 @@
 0599. ✅ test: test user registration edge cases
 0383. 🐛 fix: fix broken CSS in mobile view
 0116. ✨ feat: support email verification
+0402. 🎨 style: reformat files with black
