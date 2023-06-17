@@ -591,3 +591,4 @@
 0402. 🎨 style: reformat files with black
 0262. 🎨 style: remove trailing whitespace
 0968. 🎨 style: standardize quote style
+0825. 🔧 refactor: split large controller into smaller functions
