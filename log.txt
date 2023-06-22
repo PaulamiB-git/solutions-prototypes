@@ -596,3 +596,4 @@
 0300. ✨ feat: add export to CSV option
 0038. 🎨 style: rename variables for clarity
 0366. 🔧 refactor: remove redundant code blocks
+0517. ✅ test: mock database connection in test suite
