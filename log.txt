@@ -600,3 +600,4 @@
 0708. ✅ test: add integration test for /submit endpoint
 0883. 📚 docs: improve code comments in utils
 0347. ♻️ chore: update .gitignore
+0696. 🔧 refactor: clean up auth middleware
