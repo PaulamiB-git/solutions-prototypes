@@ -601,3 +601,4 @@
 0883. 📚 docs: improve code comments in utils
 0347. ♻️ chore: update .gitignore
 0696. 🔧 refactor: clean up auth middleware
+0936. 🔧 refactor: organize models into subfolders
