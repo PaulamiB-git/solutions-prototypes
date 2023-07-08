@@ -608,3 +608,4 @@
 0209. ✨ feat: implement quiz timer feature
 0044. ✅ test: add unit test for quiz service
 0048. 📚 docs: update README with setup steps
+0710. 🐛 fix: fix broken CSS in mobile view
