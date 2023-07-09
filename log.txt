@@ -610,3 +610,4 @@
 0048. 📚 docs: update README with setup steps
 0710. 🐛 fix: fix broken CSS in mobile view
 0522. 🐛 fix: handle 500 error in quiz API
+0133. 🐛 fix: fix null pointer exception on login
