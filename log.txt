@@ -616,3 +616,4 @@
 0671. 🐛 fix: fix null pointer exception on login
 0503. ♻️ chore: rename env.example
 0143. ✨ feat: implement quiz timer feature
+0945. ♻️ chore: add GitHub actions badge
