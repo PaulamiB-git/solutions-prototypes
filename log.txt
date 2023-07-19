@@ -617,3 +617,4 @@
 0503. ♻️ chore: rename env.example
 0143. ✨ feat: implement quiz timer feature
 0945. ♻️ chore: add GitHub actions badge
+0709. ♻️ chore: bump dependencies
