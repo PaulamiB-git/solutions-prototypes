@@ -624,3 +624,4 @@
 0179. 🔧 refactor: split large controller into smaller functions
 0309. 🔧 refactor: refactor quiz grading logic
 0167. 🚀 perf: reduce image load time
+0651. ✨ feat: enable dark mode toggle
