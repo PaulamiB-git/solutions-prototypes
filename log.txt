@@ -72,3 +72,4 @@
 0451. ✨ feat: support email verification
 0364. 🐛 fix: resolve issue with date parsing
 0294. 🐛 fix: prevent crash on empty input
+0894. ✅ test: add integration test for /submit endpoint
