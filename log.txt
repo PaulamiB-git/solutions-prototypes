@@ -630,3 +630,4 @@
 0975. 🎨 style: apply consistent indentation
 0729. 🔧 refactor: refactor quiz grading logic
 0056. ♻️ chore: rename env.example
+0805. ♻️ chore: add GitHub actions badge
