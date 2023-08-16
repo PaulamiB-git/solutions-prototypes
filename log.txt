@@ -635,3 +635,4 @@
 0251. ♻️ chore: update .gitignore
 0244. ✨ feat: add export to CSV option
 0584. 🚀 perf: lazy-load components
+0524. ♻️ chore: rename env.example
