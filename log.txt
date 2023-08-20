@@ -637,3 +637,4 @@
 0584. 🚀 perf: lazy-load components
 0524. ♻️ chore: rename env.example
 0609. 🐛 fix: handle 500 error in quiz API
+0488. ♻️ chore: add GitHub actions badge
