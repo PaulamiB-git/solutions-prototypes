@@ -638,3 +638,4 @@
 0524. ♻️ chore: rename env.example
 0609. 🐛 fix: handle 500 error in quiz API
 0488. ♻️ chore: add GitHub actions badge
+0760. 🐛 fix: resolve issue with date parsing
