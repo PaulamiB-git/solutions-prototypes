@@ -640,3 +640,4 @@
 0488. ♻️ chore: add GitHub actions badge
 0760. 🐛 fix: resolve issue with date parsing
 0392. 🎨 style: remove trailing whitespace
+0043. ✅ test: add integration test for /submit endpoint
