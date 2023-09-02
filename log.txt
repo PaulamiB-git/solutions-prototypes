@@ -647,3 +647,4 @@
 0342. 🚀 perf: cache repeated calculations
 0354. 📚 docs: add API usage examples
 0886. ♻️ chore: clean up unused files
+0801. ✨ feat: enable dark mode toggle
