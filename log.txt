@@ -651,3 +651,4 @@
 0367. 🐛 fix: fix null pointer exception on login
 0108. 🎨 style: remove trailing whitespace
 0513. ♻️ chore: bump dependencies
+0868. ✅ test: add unit test for quiz service
