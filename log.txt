@@ -655,3 +655,4 @@
 0435. ✅ test: add unit test for quiz service
 0982. 🚀 perf: lazy-load components
 0192. ✨ feat: enable dark mode toggle
+0491. 🚀 perf: lazy-load components
