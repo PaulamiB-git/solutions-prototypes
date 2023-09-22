@@ -662,3 +662,4 @@
 0568. 🐛 fix: handle 500 error in quiz API
 0368. 🚀 perf: lazy-load components
 0543. ✨ feat: support email verification
+0811. 🎨 style: reformat files with black
