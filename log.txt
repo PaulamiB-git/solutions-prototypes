@@ -670,3 +670,4 @@
 0097. 🐛 fix: handle 500 error in quiz API
 0146. 🎨 style: apply consistent indentation
 0138. 🎨 style: rename variables for clarity
+0173. 🚀 perf: cache repeated calculations
