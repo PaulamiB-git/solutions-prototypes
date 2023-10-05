@@ -672,3 +672,4 @@
 0138. 🎨 style: rename variables for clarity
 0173. 🚀 perf: cache repeated calculations
 0353. ♻️ chore: rename env.example
+0189. 📚 docs: clarify environment setup
