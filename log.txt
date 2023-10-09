@@ -673,3 +673,4 @@
 0173. 🚀 perf: cache repeated calculations
 0353. ♻️ chore: rename env.example
 0189. 📚 docs: clarify environment setup
+0692. ✅ test: add integration test for /submit endpoint
