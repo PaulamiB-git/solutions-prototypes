@@ -688,3 +688,4 @@
 0926. 🔧 refactor: organize models into subfolders
 0285. 🐛 fix: resolve issue with date parsing
 0625. 🐛 fix: handle 500 error in quiz API
+0086. 🐛 fix: correct typo in registration form
