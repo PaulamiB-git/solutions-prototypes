@@ -692,3 +692,4 @@
 0385. ♻️ chore: clean up unused files
 0083. 🎨 style: reformat files with black
 0201. 🔧 refactor: clean up auth middleware
+0136. 🚀 perf: lazy-load components
