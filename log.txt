@@ -694,3 +694,4 @@
 0201. 🔧 refactor: clean up auth middleware
 0136. 🚀 perf: lazy-load components
 0458. ✨ feat: create admin dashboard
+0171. 🐛 fix: fix broken CSS in mobile view
