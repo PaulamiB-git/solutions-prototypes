@@ -85,3 +85,4 @@
 0701. 🔧 refactor: clean up auth middleware
 0905. ♻️ chore: bump dependencies
 0264. 🚀 perf: optimize database query for quiz results
+0647. 🐛 fix: prevent crash on empty input
