@@ -701,3 +701,4 @@
 0828. ♻️ chore: add GitHub actions badge
 0661. ✅ test: add integration test for /submit endpoint
 0735. ♻️ chore: add GitHub actions badge
+0055. 📚 docs: update README with setup steps
