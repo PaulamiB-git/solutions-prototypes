@@ -703,3 +703,4 @@
 0735. ♻️ chore: add GitHub actions badge
 0055. 📚 docs: update README with setup steps
 0656. 🎨 style: apply consistent indentation
+0667. ✨ feat: add export to CSV option
