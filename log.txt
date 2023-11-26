@@ -88,3 +88,4 @@
 0647. 🐛 fix: prevent crash on empty input
 0686. 🎨 style: standardize quote style
 0702. ✨ feat: add user authentication
+0448. 🐛 fix: correct typo in registration form
