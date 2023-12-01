@@ -707,3 +707,4 @@
 0538. 🐛 fix: fix broken CSS in mobile view
 0266. 🔧 refactor: remove redundant code blocks
 0037. 🐛 fix: correct typo in registration form
+0492. 🎨 style: remove trailing whitespace
