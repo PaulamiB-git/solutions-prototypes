@@ -90,3 +90,4 @@
 0702. ✨ feat: add user authentication
 0448. 🐛 fix: correct typo in registration form
 0950. 🎨 style: reformat files with black
+0373. 📚 docs: document token refresh logic
