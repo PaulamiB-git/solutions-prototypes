@@ -711,3 +711,4 @@
 0397. 🐛 fix: handle 500 error in quiz API
 0213. ✅ test: add integration test for /submit endpoint
 0134. ✨ feat: implement quiz timer feature
+0607. 🐛 fix: prevent crash on empty input
