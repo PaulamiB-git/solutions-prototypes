@@ -712,3 +712,4 @@
 0213. ✅ test: add integration test for /submit endpoint
 0134. ✨ feat: implement quiz timer feature
 0607. 🐛 fix: prevent crash on empty input
+0291. 📚 docs: write FAQ section
