@@ -713,3 +713,4 @@
 0134. ✨ feat: implement quiz timer feature
 0607. 🐛 fix: prevent crash on empty input
 0291. 📚 docs: write FAQ section
+0978. 🐛 fix: prevent crash on empty input
