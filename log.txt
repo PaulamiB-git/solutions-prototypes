@@ -716,3 +716,4 @@
 0978. 🐛 fix: prevent crash on empty input
 0961. 📚 docs: add API usage examples
 0018. 🔧 refactor: organize models into subfolders
+0583. ✅ test: increase coverage on auth module
