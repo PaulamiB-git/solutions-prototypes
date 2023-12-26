@@ -719,3 +719,4 @@
 0583. ✅ test: increase coverage on auth module
 0094. 📚 docs: document token refresh logic
 0838. 🎨 style: standardize quote style
+0388. 🎨 style: reformat files with black
