@@ -718,3 +718,4 @@
 0018. 🔧 refactor: organize models into subfolders
 0583. ✅ test: increase coverage on auth module
 0094. 📚 docs: document token refresh logic
+0838. 🎨 style: standardize quote style
