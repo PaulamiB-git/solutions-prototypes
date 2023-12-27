@@ -95,3 +95,4 @@
 0397. 🐛 fix: handle 500 error in quiz API
 0468. 📚 docs: update README with setup steps
 0766. 🎨 style: reformat files with black
+0761. ✅ test: add unit test for quiz service
