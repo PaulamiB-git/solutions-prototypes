@@ -98,3 +98,4 @@
 0761. ✅ test: add unit test for quiz service
 0991. ♻️ chore: clean up unused files
 0749. ✨ feat: support email verification
+0249. ✅ test: increase coverage on auth module
