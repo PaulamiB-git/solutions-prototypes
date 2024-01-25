@@ -732,3 +732,4 @@
 0196. ♻️ chore: bump dependencies
 0005. ✅ test: add unit test for quiz service
 0041. 🐛 fix: fix broken CSS in mobile view
+0085. ✨ feat: support email verification
