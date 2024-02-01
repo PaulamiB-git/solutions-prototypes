@@ -100,3 +100,4 @@
 0749. ✨ feat: support email verification
 0249. ✅ test: increase coverage on auth module
 0529. 📚 docs: write FAQ section
+0696. 🔧 refactor: clean up auth middleware
