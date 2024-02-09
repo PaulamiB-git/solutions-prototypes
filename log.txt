@@ -743,3 +743,4 @@
 0215. 🎨 style: reformat files with black
 0938. 🎨 style: rename variables for clarity
 0721. 🚀 perf: optimize database query for quiz results
+0270. ♻️ chore: rename env.example
