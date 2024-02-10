@@ -745,3 +745,4 @@
 0721. 🚀 perf: optimize database query for quiz results
 0270. ♻️ chore: rename env.example
 0432. 🎨 style: apply consistent indentation
+0052. 🎨 style: standardize quote style
