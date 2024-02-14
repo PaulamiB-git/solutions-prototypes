@@ -750,3 +750,4 @@
 0565. ♻️ chore: add GitHub actions badge
 0250. 📚 docs: update README with setup steps
 0714. 📚 docs: improve code comments in utils
+0793. 📚 docs: clarify environment setup
