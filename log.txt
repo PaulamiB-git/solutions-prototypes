@@ -762,3 +762,4 @@
 0502. 📚 docs: update README with setup steps
 0815. 🔧 refactor: split large controller into smaller functions
 0375. 🐛 fix: handle 500 error in quiz API
+0175. 📚 docs: add API usage examples
