@@ -765,3 +765,4 @@
 0175. 📚 docs: add API usage examples
 0067. 🔧 refactor: remove redundant code blocks
 0006. 🐛 fix: prevent crash on empty input
+0829. 🔧 refactor: organize models into subfolders
