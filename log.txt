@@ -771,3 +771,4 @@
 0684. 🚀 perf: reduce image load time
 0508. ✅ test: add unit test for quiz service
 0876. ♻️ chore: rename env.example
+0841. 🚀 perf: optimize database query for quiz results
