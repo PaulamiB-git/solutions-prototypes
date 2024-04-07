@@ -782,3 +782,4 @@
 0921. 🐛 fix: correct typo in registration form
 0022. 📚 docs: document token refresh logic
 0834. ✅ test: increase coverage on auth module
+0769. ✨ feat: create admin dashboard
