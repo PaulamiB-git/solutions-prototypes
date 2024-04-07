@@ -783,3 +783,4 @@
 0022. 📚 docs: document token refresh logic
 0834. ✅ test: increase coverage on auth module
 0769. ✨ feat: create admin dashboard
+0451. ✨ feat: support email verification
