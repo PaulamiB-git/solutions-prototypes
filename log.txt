@@ -791,3 +791,4 @@
 0724. ✅ test: mock database connection in test suite
 0623. 🎨 style: standardize quote style
 0999. 🔧 refactor: split large controller into smaller functions
+0065. ✅ test: add integration test for /submit endpoint
