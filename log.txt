@@ -795,3 +795,4 @@
 0740. 🐛 fix: resolve issue with date parsing
 0153. ♻️ chore: rename env.example
 0682. ♻️ chore: rename env.example
+0808. 🚀 perf: optimize database query for quiz results
