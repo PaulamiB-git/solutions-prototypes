@@ -801,3 +801,4 @@
 0235. 🐛 fix: fix null pointer exception on login
 0862. ♻️ chore: bump dependencies
 0074. ♻️ chore: add GitHub actions badge
+0533. ♻️ chore: add GitHub actions badge
