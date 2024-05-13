@@ -806,3 +806,4 @@
 0334. 🚀 perf: cache repeated calculations
 0984. ♻️ chore: clean up unused files
 0909. 🔧 refactor: organize models into subfolders
+0423. ✅ test: mock database connection in test suite
