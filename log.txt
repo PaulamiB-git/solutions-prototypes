@@ -810,3 +810,4 @@
 0946. ✅ test: add unit test for quiz service
 0297. 🎨 style: remove trailing whitespace
 0015. ✨ feat: implement quiz timer feature
+0246. ✅ test: add integration test for /submit endpoint
