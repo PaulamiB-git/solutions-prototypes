@@ -815,3 +815,4 @@
 0518. ✨ feat: support email verification
 0979. 🎨 style: standardize quote style
 0332. 🎨 style: standardize quote style
+0781. 🚀 perf: reduce image load time
