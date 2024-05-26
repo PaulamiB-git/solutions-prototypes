@@ -817,3 +817,4 @@
 0332. 🎨 style: standardize quote style
 0781. 🚀 perf: reduce image load time
 0448. 🐛 fix: correct typo in registration form
+0804. ♻️ chore: add GitHub actions badge
