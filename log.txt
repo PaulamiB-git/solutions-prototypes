@@ -819,3 +819,4 @@
 0448. 🐛 fix: correct typo in registration form
 0804. ♻️ chore: add GitHub actions badge
 0466. 🚀 perf: optimize database query for quiz results
+0629. 🔧 refactor: organize models into subfolders
