@@ -822,3 +822,4 @@
 0629. 🔧 refactor: organize models into subfolders
 0123. ✨ feat: implement quiz timer feature
 0911. ✅ test: increase coverage on auth module
+0725. 🚀 perf: lazy-load components
