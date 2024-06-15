@@ -827,3 +827,4 @@
 0720. ✨ feat: add export to CSV option
 0324. 📚 docs: document token refresh logic
 0891. ✨ feat: create admin dashboard
+0429. ✨ feat: add user authentication
