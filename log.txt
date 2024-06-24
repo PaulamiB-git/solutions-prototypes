@@ -121,3 +121,4 @@
 0577. ✨ feat: implement quiz timer feature
 0830. 🎨 style: apply consistent indentation
 0730. ✅ test: test user registration edge cases
+0377. ✨ feat: add user authentication
