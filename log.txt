@@ -829,3 +829,4 @@
 0891. ✨ feat: create admin dashboard
 0429. ✨ feat: add user authentication
 0581. ✅ test: add integration test for /submit endpoint
+0727. ♻️ chore: add GitHub actions badge
