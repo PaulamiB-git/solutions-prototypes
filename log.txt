@@ -845,3 +845,4 @@
 0719. 🎨 style: apply consistent indentation
 0860. 🔧 refactor: organize models into subfolders
 0899. 🚀 perf: cache repeated calculations
+0791. 🔧 refactor: clean up auth middleware
