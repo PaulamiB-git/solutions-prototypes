@@ -849,3 +849,4 @@
 0675. 🔧 refactor: organize models into subfolders
 0738. 🐛 fix: prevent crash on empty input
 0678. ✨ feat: add user authentication
+0281. ✨ feat: support email verification
