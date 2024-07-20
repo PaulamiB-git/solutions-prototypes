@@ -851,3 +851,4 @@
 0678. ✨ feat: add user authentication
 0281. ✨ feat: support email verification
 0374. 🎨 style: standardize quote style
+0506. 🐛 fix: handle 500 error in quiz API
