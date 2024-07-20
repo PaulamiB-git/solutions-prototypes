@@ -854,3 +854,4 @@
 0506. 🐛 fix: handle 500 error in quiz API
 0743. 🎨 style: apply consistent indentation
 0305. ✨ feat: enable dark mode toggle
+0024. 📚 docs: write FAQ section
