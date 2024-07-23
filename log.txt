@@ -856,3 +856,4 @@
 0305. ✨ feat: enable dark mode toggle
 0024. 📚 docs: write FAQ section
 0830. 🎨 style: apply consistent indentation
+0511. 🐛 fix: fix broken CSS in mobile view
