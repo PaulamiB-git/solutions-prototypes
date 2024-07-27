@@ -123,3 +123,4 @@
 0730. ✅ test: test user registration edge cases
 0377. ✨ feat: add user authentication
 0827. 🚀 perf: optimize database query for quiz results
+0276. ✅ test: add integration test for /submit endpoint
