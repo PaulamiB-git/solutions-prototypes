@@ -860,3 +860,4 @@
 0640. ♻️ chore: bump dependencies
 0669. ✨ feat: enable dark mode toggle
 0590. 🐛 fix: fix null pointer exception on login
+0903. ✅ test: mock database connection in test suite
