@@ -125,3 +125,4 @@
 0827. 🚀 perf: optimize database query for quiz results
 0276. ✅ test: add integration test for /submit endpoint
 0578. ✅ test: add integration test for /submit endpoint
+0597. 🚀 perf: cache repeated calculations
