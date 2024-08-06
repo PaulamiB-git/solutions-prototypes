@@ -867,3 +867,4 @@
 0117. ✅ test: increase coverage on auth module
 0790. 📚 docs: write FAQ section
 0393. 🚀 perf: lazy-load components
+0557. 🔧 refactor: clean up auth middleware
