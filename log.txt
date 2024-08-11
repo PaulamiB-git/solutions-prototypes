@@ -128,3 +128,4 @@
 0597. 🚀 perf: cache repeated calculations
 0561. 📚 docs: write FAQ section
 0549. ✨ feat: enable dark mode toggle
+0829. 🔧 refactor: organize models into subfolders
