@@ -874,3 +874,4 @@
 0619. ✨ feat: create admin dashboard
 0163. ✨ feat: implement quiz timer feature
 0243. 🔧 refactor: clean up auth middleware
+0646. ✅ test: test user registration edge cases
