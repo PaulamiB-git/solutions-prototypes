@@ -875,3 +875,4 @@
 0163. ✨ feat: implement quiz timer feature
 0243. 🔧 refactor: clean up auth middleware
 0646. ✅ test: test user registration edge cases
+0882. 🚀 perf: optimize database query for quiz results
