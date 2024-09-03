@@ -134,3 +134,4 @@
 0817. 🔧 refactor: remove redundant code blocks
 0031. 📚 docs: document token refresh logic
 0998. 🐛 fix: fix null pointer exception on login
+0233. 🚀 perf: lazy-load components
