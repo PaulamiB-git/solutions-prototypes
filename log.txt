@@ -135,3 +135,4 @@
 0031. 📚 docs: document token refresh logic
 0998. 🐛 fix: fix null pointer exception on login
 0233. 🚀 perf: lazy-load components
+0086. 🐛 fix: correct typo in registration form
