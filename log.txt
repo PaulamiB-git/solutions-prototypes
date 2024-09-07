@@ -882,3 +882,4 @@
 0642. 🚀 perf: optimize database query for quiz results
 0768. 🎨 style: remove trailing whitespace
 0434. 📚 docs: document token refresh logic
+0036. 🔧 refactor: clean up auth middleware
