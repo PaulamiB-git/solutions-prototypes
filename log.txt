@@ -883,3 +883,4 @@
 0768. 🎨 style: remove trailing whitespace
 0434. 📚 docs: document token refresh logic
 0036. 🔧 refactor: clean up auth middleware
+0658. 🎨 style: rename variables for clarity
