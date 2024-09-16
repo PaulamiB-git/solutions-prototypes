@@ -888,3 +888,4 @@
 0443. 🎨 style: standardize quote style
 0580. ♻️ chore: bump dependencies
 0631. ✨ feat: create admin dashboard
+0605. ✨ feat: support email verification
