@@ -137,3 +137,4 @@
 0233. 🚀 perf: lazy-load components
 0086. 🐛 fix: correct typo in registration form
 0189. 📚 docs: clarify environment setup
+0442. 🎨 style: standardize quote style
