@@ -138,3 +138,4 @@
 0086. 🐛 fix: correct typo in registration form
 0189. 📚 docs: clarify environment setup
 0442. 🎨 style: standardize quote style
+0034. 📚 docs: improve code comments in utils
