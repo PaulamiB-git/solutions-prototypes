@@ -894,3 +894,4 @@
 0261. 🔧 refactor: refactor quiz grading logic
 0241. 📚 docs: add API usage examples
 0794. ♻️ chore: clean up unused files
+0091. ✨ feat: add user authentication
