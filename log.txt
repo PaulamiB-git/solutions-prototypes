@@ -896,3 +896,4 @@
 0794. ♻️ chore: clean up unused files
 0091. ✨ feat: add user authentication
 0971. 🎨 style: standardize quote style
+0864. 🐛 fix: correct typo in registration form
