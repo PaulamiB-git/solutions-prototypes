@@ -899,3 +899,4 @@
 0864. 🐛 fix: correct typo in registration form
 0762. 🚀 perf: lazy-load components
 0572. ✨ feat: add user authentication
+0287. 📚 docs: write FAQ section
