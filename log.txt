@@ -897,3 +897,4 @@
 0091. ✨ feat: add user authentication
 0971. 🎨 style: standardize quote style
 0864. 🐛 fix: correct typo in registration form
+0762. 🚀 perf: lazy-load components
