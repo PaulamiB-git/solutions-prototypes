@@ -902,3 +902,4 @@
 0287. 📚 docs: write FAQ section
 0928. 🎨 style: apply consistent indentation
 0579. 📚 docs: clarify environment setup
+0737. 🐛 fix: handle 500 error in quiz API
