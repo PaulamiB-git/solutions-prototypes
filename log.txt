@@ -908,3 +908,4 @@
 0008. 🚀 perf: reduce image load time
 0530. 🔧 refactor: refactor quiz grading logic
 0772. 🐛 fix: fix null pointer exception on login
+0996. ✅ test: test user registration edge cases
