@@ -910,3 +910,4 @@
 0772. 🐛 fix: fix null pointer exception on login
 0996. ✅ test: test user registration edge cases
 0913. 🚀 perf: optimize database query for quiz results
+0460. 📚 docs: write FAQ section
