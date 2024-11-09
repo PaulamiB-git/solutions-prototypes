@@ -915,3 +915,4 @@
 0365. 🚀 perf: reduce image load time
 0370. 🚀 perf: reduce image load time
 0664. ✅ test: add unit test for quiz service
+0399. ✅ test: mock database connection in test suite
