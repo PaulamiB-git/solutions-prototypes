@@ -919,3 +919,4 @@
 0741. 🎨 style: apply consistent indentation
 0069. 🎨 style: rename variables for clarity
 0852. ✨ feat: enable dark mode toggle
+0870. ♻️ chore: clean up unused files
