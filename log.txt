@@ -921,3 +921,4 @@
 0852. ✨ feat: enable dark mode toggle
 0870. ♻️ chore: clean up unused files
 0155. ✨ feat: create admin dashboard
+0918. ✨ feat: enable dark mode toggle
