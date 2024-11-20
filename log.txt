@@ -923,3 +923,4 @@
 0155. ✨ feat: create admin dashboard
 0918. ✨ feat: enable dark mode toggle
 0906. 📚 docs: add API usage examples
+0551. 📚 docs: write FAQ section
