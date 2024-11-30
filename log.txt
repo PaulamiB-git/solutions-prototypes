@@ -931,3 +931,4 @@
 0874. 🔧 refactor: split large controller into smaller functions
 0644. 🎨 style: apply consistent indentation
 0980. 🎨 style: reformat files with black
+0545. 🎨 style: standardize quote style
