@@ -145,3 +145,4 @@
 0566. 📚 docs: write FAQ section
 0625. 🐛 fix: handle 500 error in quiz API
 0197. 📚 docs: update README with setup steps
+0531. 🐛 fix: prevent crash on empty input
