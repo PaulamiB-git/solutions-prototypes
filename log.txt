@@ -942,3 +942,4 @@
 0049. 🐛 fix: handle 500 error in quiz API
 0188. 🎨 style: apply consistent indentation
 0279. ✨ feat: support email verification
+0586. 🎨 style: remove trailing whitespace
