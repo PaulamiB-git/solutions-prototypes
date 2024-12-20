@@ -943,3 +943,4 @@
 0188. 🎨 style: apply consistent indentation
 0279. ✨ feat: support email verification
 0586. 🎨 style: remove trailing whitespace
+0536. ✨ feat: add user authentication
