@@ -146,3 +146,4 @@
 0625. 🐛 fix: handle 500 error in quiz API
 0197. 📚 docs: update README with setup steps
 0531. 🐛 fix: prevent crash on empty input
+0219. ✅ test: increase coverage on auth module
