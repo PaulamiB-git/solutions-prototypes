@@ -944,3 +944,4 @@
 0279. ✨ feat: support email verification
 0586. 🎨 style: remove trailing whitespace
 0536. ✨ feat: add user authentication
+0124. 🎨 style: reformat files with black
