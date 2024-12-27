@@ -945,3 +945,4 @@
 0586. 🎨 style: remove trailing whitespace
 0536. ✨ feat: add user authentication
 0124. 🎨 style: reformat files with black
+0323. 📚 docs: clarify environment setup
