@@ -951,3 +951,4 @@
 0457. 🐛 fix: handle 500 error in quiz API
 0707. 🎨 style: apply consistent indentation
 0242. ♻️ chore: clean up unused files
+0711. 🐛 fix: fix broken CSS in mobile view
