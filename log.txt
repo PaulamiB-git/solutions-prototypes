@@ -952,3 +952,4 @@
 0707. 🎨 style: apply consistent indentation
 0242. ♻️ chore: clean up unused files
 0711. 🐛 fix: fix broken CSS in mobile view
+0879. 🎨 style: standardize quote style
