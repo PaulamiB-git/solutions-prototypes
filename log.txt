@@ -955,3 +955,4 @@
 0879. 🎨 style: standardize quote style
 0222. 🐛 fix: handle 500 error in quiz API
 0131. 📚 docs: write FAQ section
+0294. 🐛 fix: prevent crash on empty input
