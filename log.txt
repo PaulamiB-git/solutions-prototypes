@@ -957,3 +957,4 @@
 0131. 📚 docs: write FAQ section
 0294. 🐛 fix: prevent crash on empty input
 0345. 📚 docs: document token refresh logic
+0236. 🔧 refactor: remove redundant code blocks
