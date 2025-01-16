@@ -960,3 +960,4 @@
 0236. 🔧 refactor: remove redundant code blocks
 0859. ✨ feat: create admin dashboard
 0732. ♻️ chore: add GitHub actions badge
+0110. 🐛 fix: prevent crash on empty input
