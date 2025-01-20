@@ -961,3 +961,4 @@
 0859. ✨ feat: create admin dashboard
 0732. ♻️ chore: add GitHub actions badge
 0110. 🐛 fix: prevent crash on empty input
+0733. 🐛 fix: fix null pointer exception on login
