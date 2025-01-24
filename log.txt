@@ -965,3 +965,4 @@
 0567. 📚 docs: add API usage examples
 0958. 🐛 fix: prevent crash on empty input
 0613. 🐛 fix: prevent crash on empty input
+0329. 📚 docs: update README with setup steps
