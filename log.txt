@@ -971,3 +971,4 @@
 0148. 🔧 refactor: organize models into subfolders
 0174. 📚 docs: clarify environment setup
 0267. 📚 docs: improve code comments in utils
+0582. ✨ feat: add export to CSV option
