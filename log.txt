@@ -972,3 +972,4 @@
 0174. 📚 docs: clarify environment setup
 0267. 📚 docs: improve code comments in utils
 0582. ✨ feat: add export to CSV option
+0770. ♻️ chore: rename env.example
