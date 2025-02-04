@@ -148,3 +148,4 @@
 0531. 🐛 fix: prevent crash on empty input
 0219. ✅ test: increase coverage on auth module
 0167. 🚀 perf: reduce image load time
+0706. ✨ feat: support email verification
