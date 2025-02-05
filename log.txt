@@ -974,3 +974,4 @@
 0582. ✨ feat: add export to CSV option
 0770. ♻️ chore: rename env.example
 0541. 🐛 fix: correct typo in registration form
+0895. ✨ feat: support email verification
