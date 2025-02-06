@@ -975,3 +975,4 @@
 0770. ♻️ chore: rename env.example
 0541. 🐛 fix: correct typo in registration form
 0895. ✨ feat: support email verification
+0184. 📚 docs: improve code comments in utils
