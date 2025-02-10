@@ -151,3 +151,4 @@
 0706. ✨ feat: support email verification
 0412. ✅ test: increase coverage on auth module
 0904. ✨ feat: implement quiz timer feature
+0594. 🎨 style: reformat files with black
