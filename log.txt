@@ -978,3 +978,4 @@
 0184. 📚 docs: improve code comments in utils
 0224. 🐛 fix: fix broken CSS in mobile view
 0103. 🔧 refactor: remove redundant code blocks
+0252. 🎨 style: remove trailing whitespace
