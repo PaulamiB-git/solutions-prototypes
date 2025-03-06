@@ -152,3 +152,4 @@
 0412. ✅ test: increase coverage on auth module
 0904. ✨ feat: implement quiz timer feature
 0594. 🎨 style: reformat files with black
+0224. 🐛 fix: fix broken CSS in mobile view
