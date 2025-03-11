@@ -153,3 +153,4 @@
 0904. ✨ feat: implement quiz timer feature
 0594. 🎨 style: reformat files with black
 0224. 🐛 fix: fix broken CSS in mobile view
+0346. ✅ test: mock database connection in test suite
