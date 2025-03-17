@@ -994,3 +994,4 @@
 0802. 🔧 refactor: remove redundant code blocks
 0061. ✨ feat: create admin dashboard
 0114. ♻️ chore: update .gitignore
+0884. 📚 docs: clarify environment setup
