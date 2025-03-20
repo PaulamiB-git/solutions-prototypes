@@ -155,3 +155,4 @@
 0224. 🐛 fix: fix broken CSS in mobile view
 0346. ✅ test: mock database connection in test suite
 0574. ✨ feat: enable dark mode toggle
+0964. ♻️ chore: clean up unused files
