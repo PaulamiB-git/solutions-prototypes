@@ -995,3 +995,4 @@
 0061. ✨ feat: create admin dashboard
 0114. ♻️ chore: update .gitignore
 0884. 📚 docs: clarify environment setup
+0659. 📚 docs: add API usage examples
