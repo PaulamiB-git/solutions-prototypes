@@ -999,3 +999,4 @@
 0726. ✨ feat: enable dark mode toggle
 0833. ✨ feat: add user authentication
 0437. 📚 docs: clarify environment setup
+0412. ✅ test: increase coverage on auth module
