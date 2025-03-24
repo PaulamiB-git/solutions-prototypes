@@ -1000,3 +1000,4 @@
 0833. ✨ feat: add user authentication
 0437. 📚 docs: clarify environment setup
 0412. ✅ test: increase coverage on auth module
+0441. 📚 docs: add API usage examples
