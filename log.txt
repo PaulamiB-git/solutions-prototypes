@@ -1002,3 +1002,4 @@
 0412. ✅ test: increase coverage on auth module
 0441. 📚 docs: add API usage examples
 0863. 🐛 fix: correct typo in registration form
+0411. ✅ test: add unit test for quiz service
