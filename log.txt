@@ -1004,3 +1004,4 @@
 0863. 🐛 fix: correct typo in registration form
 0411. ✅ test: add unit test for quiz service
 0797. 📚 docs: add API usage examples
+0630. 🚀 perf: lazy-load components
