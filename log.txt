@@ -157,3 +157,4 @@
 0574. ✨ feat: enable dark mode toggle
 0964. ♻️ chore: clean up unused files
 0257. 📚 docs: clarify environment setup
+0722. 📚 docs: add API usage examples
