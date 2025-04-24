@@ -1018,3 +1018,4 @@
 0935. 📚 docs: update README with setup steps
 0325. 🎨 style: rename variables for clarity
 0440. 📚 docs: update README with setup steps
+0181. ♻️ chore: add GitHub actions badge
