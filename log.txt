@@ -1035,3 +1035,4 @@
 0204. 🎨 style: standardize quote style
 0377. ✨ feat: add user authentication
 0130. 🔧 refactor: split large controller into smaller functions
+0152. ✨ feat: add user authentication
