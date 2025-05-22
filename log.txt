@@ -1036,3 +1036,4 @@
 0377. ✨ feat: add user authentication
 0130. 🔧 refactor: split large controller into smaller functions
 0152. ✨ feat: add user authentication
+0754. 🐛 fix: handle 500 error in quiz API
