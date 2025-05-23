@@ -1037,3 +1037,4 @@
 0130. 🔧 refactor: split large controller into smaller functions
 0152. ✨ feat: add user authentication
 0754. 🐛 fix: handle 500 error in quiz API
+0072. 🚀 perf: optimize database query for quiz results
