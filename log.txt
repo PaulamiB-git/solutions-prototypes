@@ -165,3 +165,4 @@
 0840. 🔧 refactor: refactor quiz grading logic
 0850. ♻️ chore: rename env.example
 0740. 🐛 fix: resolve issue with date parsing
+0590. 🐛 fix: fix null pointer exception on login
