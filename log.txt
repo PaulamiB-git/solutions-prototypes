@@ -1051,3 +1051,4 @@
 0944. ✨ feat: add user authentication
 0493. ✨ feat: add user authentication
 0789. ✨ feat: create admin dashboard
+0053. ✅ test: increase coverage on auth module
