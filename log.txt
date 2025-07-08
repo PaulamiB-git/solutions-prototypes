@@ -1061,3 +1061,4 @@
 0054. ♻️ chore: update .gitignore
 0574. ✨ feat: enable dark mode toggle
 0988. 🐛 fix: fix broken CSS in mobile view
+0234. ♻️ chore: rename env.example
