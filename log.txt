@@ -1067,3 +1067,4 @@
 0193. 🚀 perf: optimize database query for quiz results
 0031. 📚 docs: document token refresh logic
 0442. 🎨 style: standardize quote style
+0330. ✅ test: test user registration edge cases
