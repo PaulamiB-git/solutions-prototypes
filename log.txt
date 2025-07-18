@@ -1068,3 +1068,4 @@
 0031. 📚 docs: document token refresh logic
 0442. 🎨 style: standardize quote style
 0330. ✅ test: test user registration edge cases
+0824. 🚀 perf: lazy-load components
