@@ -1069,3 +1069,4 @@
 0442. 🎨 style: standardize quote style
 0330. ✅ test: test user registration edge cases
 0824. 🚀 perf: lazy-load components
+0361. ✨ feat: support email verification
