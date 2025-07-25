@@ -1074,3 +1074,4 @@
 0403. ✅ test: mock database connection in test suite
 0701. 🔧 refactor: clean up auth middleware
 0826. 📚 docs: clarify environment setup
+0747. 🔧 refactor: clean up auth middleware
