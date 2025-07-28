@@ -1079,3 +1079,4 @@
 0157. ✅ test: mock database connection in test suite
 0553. 🐛 fix: correct typo in registration form
 0472. 🐛 fix: fix null pointer exception on login
+0573. ✅ test: add integration test for /submit endpoint
