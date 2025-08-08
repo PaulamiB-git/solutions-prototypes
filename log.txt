@@ -1085,3 +1085,4 @@
 0282. 🔧 refactor: remove redundant code blocks
 0780. 📚 docs: add API usage examples
 0182. 🔧 refactor: remove redundant code blocks
+0783. 🐛 fix: handle 500 error in quiz API
