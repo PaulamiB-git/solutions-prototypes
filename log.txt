@@ -1087,3 +1087,4 @@
 0182. 🔧 refactor: remove redundant code blocks
 0783. 🐛 fix: handle 500 error in quiz API
 0792. 🎨 style: standardize quote style
+0660. 🐛 fix: correct typo in registration form
