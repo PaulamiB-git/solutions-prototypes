@@ -1093,3 +1093,4 @@
 0161. ✨ feat: create admin dashboard
 0408. ♻️ chore: add GitHub actions badge
 0706. ✨ feat: support email verification
+0025. 🚀 perf: optimize database query for quiz results
