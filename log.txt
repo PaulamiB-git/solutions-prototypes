@@ -1091,3 +1091,4 @@
 0316. 🐛 fix: fix broken CSS in mobile view
 0227. ✅ test: test user registration edge cases
 0161. ✨ feat: create admin dashboard
+0408. ♻️ chore: add GitHub actions badge
