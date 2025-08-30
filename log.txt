@@ -1099,3 +1099,4 @@
 0164. 📚 docs: document token refresh logic
 0132. ✅ test: add unit test for quiz service
 0704. 🚀 perf: cache repeated calculations
+0571. 🔧 refactor: clean up auth middleware
