@@ -1103,3 +1103,4 @@
 0328. 🐛 fix: resolve issue with date parsing
 0990. ♻️ chore: rename env.example
 0686. 🎨 style: standardize quote style
+0878. 🔧 refactor: split large controller into smaller functions
