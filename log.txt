@@ -1104,3 +1104,4 @@
 0990. ♻️ chore: rename env.example
 0686. 🎨 style: standardize quote style
 0878. 🔧 refactor: split large controller into smaller functions
+0338. ♻️ chore: add GitHub actions badge
