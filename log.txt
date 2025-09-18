@@ -1109,3 +1109,4 @@
 0002. 🚀 perf: cache repeated calculations
 0438. ♻️ chore: bump dependencies
 0286. ✅ test: mock database connection in test suite
+0500. ✅ test: add integration test for /submit endpoint
