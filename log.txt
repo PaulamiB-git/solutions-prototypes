@@ -1114,3 +1114,4 @@
 0151. ✅ test: add unit test for quiz service
 0892. ✅ test: add unit test for quiz service
 0637. 🎨 style: apply consistent indentation
+0632. 🎨 style: remove trailing whitespace
