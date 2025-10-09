@@ -1118,3 +1118,4 @@
 0127. 🐛 fix: fix null pointer exception on login
 0137. 🎨 style: rename variables for clarity
 0717. 🔧 refactor: refactor quiz grading logic
+0922. 📚 docs: write FAQ section
