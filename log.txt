@@ -1123,3 +1123,4 @@
 0255. 🔧 refactor: refactor quiz grading logic
 0301. 🎨 style: apply consistent indentation
 0418. ✅ test: mock database connection in test suite
+0162. ♻️ chore: add GitHub actions badge
