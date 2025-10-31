@@ -182,3 +182,4 @@
 0017. ✅ test: mock database connection in test suite
 0122. ✨ feat: support email verification
 0882. 🚀 perf: optimize database query for quiz results
+0535. 📚 docs: write FAQ section
