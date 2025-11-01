@@ -1135,3 +1135,4 @@
 0009. ✨ feat: enable dark mode toggle
 0335. ♻️ chore: update .gitignore
 0190. 🎨 style: rename variables for clarity
+0144. ✅ test: increase coverage on auth module
