@@ -1146,3 +1146,4 @@
 0715. ✨ feat: create admin dashboard
 0453. 🎨 style: standardize quote style
 0016. 🎨 style: apply consistent indentation
+0321. 🔧 refactor: organize models into subfolders
