@@ -1149,3 +1149,4 @@
 0321. 🔧 refactor: organize models into subfolders
 0386. 🚀 perf: optimize database query for quiz results
 0057. 🚀 perf: optimize database query for quiz results
+0927. ♻️ chore: bump dependencies
