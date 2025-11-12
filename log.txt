@@ -184,3 +184,4 @@
 0882. 🚀 perf: optimize database query for quiz results
 0535. 📚 docs: write FAQ section
 0756. ✨ feat: support email verification
+0709. ♻️ chore: bump dependencies
