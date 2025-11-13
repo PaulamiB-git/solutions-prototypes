@@ -185,3 +185,4 @@
 0535. 📚 docs: write FAQ section
 0756. ✨ feat: support email verification
 0709. ♻️ chore: bump dependencies
+0811. 🎨 style: reformat files with black
