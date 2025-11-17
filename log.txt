@@ -1152,3 +1152,4 @@
 0927. ♻️ chore: bump dependencies
 0549. ✨ feat: enable dark mode toggle
 0955. 🔧 refactor: remove redundant code blocks
+0496. ✅ test: add integration test for /submit endpoint
