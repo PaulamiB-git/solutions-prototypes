@@ -1157,3 +1157,4 @@
 0654. ✨ feat: create admin dashboard
 0115. 🚀 perf: reduce image load time
 0902. ✨ feat: enable dark mode toggle
+0029. 🚀 perf: lazy-load components
