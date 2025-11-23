@@ -188,3 +188,4 @@
 0811. 🎨 style: reformat files with black
 0858. ♻️ chore: clean up unused files
 0365. 🚀 perf: reduce image load time
+0875. ✅ test: increase coverage on auth module
