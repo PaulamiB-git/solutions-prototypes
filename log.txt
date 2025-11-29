@@ -1168,3 +1168,4 @@
 0001. 🚀 perf: cache repeated calculations
 0092. 🚀 perf: reduce image load time
 0454. ♻️ chore: bump dependencies
+0749. ✨ feat: support email verification
