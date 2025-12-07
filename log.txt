@@ -1170,3 +1170,4 @@
 0454. ♻️ chore: bump dependencies
 0749. ✨ feat: support email verification
 0364. 🐛 fix: resolve issue with date parsing
+0773. 📚 docs: document token refresh logic
