@@ -1178,3 +1178,4 @@
 0306. 🎨 style: apply consistent indentation
 0200. 🐛 fix: handle 500 error in quiz API
 0676. 🐛 fix: prevent crash on empty input
+0810. 🔧 refactor: refactor quiz grading logic
