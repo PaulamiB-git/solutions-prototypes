@@ -195,3 +195,4 @@
 0235. 🐛 fix: fix null pointer exception on login
 0254. 🚀 perf: reduce image load time
 0155. ✨ feat: create admin dashboard
+0194. 🎨 style: standardize quote style
