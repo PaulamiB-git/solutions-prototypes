@@ -1180,3 +1180,4 @@
 0676. 🐛 fix: prevent crash on empty input
 0810. 🔧 refactor: refactor quiz grading logic
 0993. ✨ feat: implement quiz timer feature
+0633. ✨ feat: add user authentication
