@@ -1187,3 +1187,4 @@
 0820. 📚 docs: add API usage examples
 0626. 🎨 style: standardize quote style
 0645. 🐛 fix: resolve issue with date parsing
+0401. 🚀 perf: reduce image load time
