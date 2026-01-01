@@ -1190,3 +1190,4 @@
 0401. 🚀 perf: reduce image load time
 0929. ✨ feat: support email verification
 0249. ✅ test: increase coverage on auth module
+0276. ✅ test: add integration test for /submit endpoint
