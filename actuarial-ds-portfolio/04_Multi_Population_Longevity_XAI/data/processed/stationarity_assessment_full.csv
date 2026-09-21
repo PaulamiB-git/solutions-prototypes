@@ -1,0 +1,7 @@
+Country,ADF_p-value,KPSS_p-value,ADF_Status,KPSS_Status,Final_Assessment
+Switzerland,0.7661,0.1000,FAIL,PASS,Conflicting/Persistent Drift
+Sweden,0.9289,0.0100,FAIL,FAIL,Unit Root (Non-Stationary)
+Norway,0.0000,0.0889,PASS,PASS,Stationary
+West Germany,0.9467,0.0100,FAIL,FAIL,Unit Root (Non-Stationary)
+Netherlands,0.1038,0.0100,FAIL,FAIL,Unit Root (Non-Stationary)
+Japan,0.0424,0.0165,PASS,FAIL,Conflicting/Persistent Drift

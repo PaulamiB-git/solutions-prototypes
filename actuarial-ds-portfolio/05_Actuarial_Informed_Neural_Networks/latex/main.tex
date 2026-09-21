@@ -1,0 +1,433 @@
+\documentclass[11pt,a4paper]{article}
+% --- Packages ---
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{caption}
+\usepackage{fancyhdr}
+\usepackage{cite}
+\usepackage{authblk}
+\usepackage{float}
+\makeatletter
+\renewcommand\AB@authnote[1]{}
+\renewcommand\AB@affilnote[1]{}
+\makeatother
+\renewcommand\Authands{, }
+\geometry{margin=2.5cm}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Actuarial-Informed Neural Networks}
+\fancyhead[R]{\small Rindori (2026)}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\title{\textbf{Actuarial-Informed Neural Networks: \\ Constrained Deep Learning for Sex-Specific \\ Multi-Population Longevity Forecasting}}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We introduce Actuarial-Informed Neural Networks (AINN), a constrained deep learning framework for sex-specific multi-population longevity forecasting that embeds actuarial domain knowledge directly into the LSTM training process through differentiable penalty terms. Applied to a high-longevity 6-country cluster (Switzerland, Sweden, Norway, West Germany, Netherlands, Japan; 1956--2020), the framework positions itself as a challenger model to both the Li-Lee benchmark and unconstrained neural approaches.
+
+Our central finding is that the monotonicity constraint intensity $\lambda$ functions as a \textit{continuous governance dial} with a quantifiable accuracy-stability trade-off. At $\lambda = 0.01$, 30-year forecast confidence intervals narrow by 6.5\% at zero RMSE cost. At $\lambda = 0.1$, they narrow by 25\% at only +0.84\% RMSE cost. This trade-off is invisible to standard hyperparameter optimizers, which select $\lambda$ by minimizing one-step RMSE --- the wrong metric for evaluating structural constraints in recursive forecasting.
+
+The framework incorporates three additional methodological contributions: (i)~residual-calibrated process noise that eliminates double-counting in the dual uncertainty framework, reducing confidence intervals by 53--60\%; (ii)~a 5-seed model ensemble achieving a coefficient of variation of 1.06\%; and (iii)~a time-varying credibility weight $Z(t) = e^{-\alpha t}$ connecting to B\"uhlmann credibility theory for principled blending of neural and actuarial predictions.
+
+A 10-year out-of-sample backtest (trained on 1956--2010, validated against observed HMD life expectancy for 2011--2020) yields a mean absolute error of 0.38 years, with 11 of 12 country$\times$sex combinations within the 90\% confidence interval. The model produces regulatory-grade outputs including Solvency Capital Requirements under both the Swiss Solvency Test (ES 99.0\%: +1.91 years, CHE Male) and Solvency II standards, reverse stress testing, and model-based stability verification (amplification ratio 1.02$\times$).
+
+\vspace{0.4cm}
+\noindent \textbf{Keywords:} Actuarial-Informed Neural Networks, Constrained Deep Learning, Multi-population Longevity, Sex-specific Mortality Forecasting, Credibility Theory, Swiss Solvency Test (SST), Model Governance, Explainable AI.
+
+\vspace{0.2cm}
+\noindent The complete codebase is publicly available.\footnote{\url{https://github.com/davide-rindori/actuarial-ds-portfolio/tree/main/05_Actuarial_Informed_Neural_Networks}}
+\end{abstract}
+
+\section{Introduction}
+
+\subsection{The Longevity Risk Challenge}
+
+The systemic increase in human life expectancy is one of the most significant financial risks facing the modern insurance and reinsurance industry. For institutional players such as Swiss Re and Munich Re, the accurate quantification of longevity risk is not merely a pricing exercise but a fundamental requirement for capital adequacy under the Swiss Solvency Test (SST) and Solvency II frameworks \cite{swissre2022}. An underestimation of future life expectancy improvements translates directly into under-reserving of annuity and pension liabilities --- a risk that compounds over decades and can threaten solvency.
+
+Traditional stochastic mortality models, primarily the Lee-Carter framework \cite{leecarter1992} and its multi-population extension by Li and Lee \cite{lilee2005}, have served as the industry benchmark for over three decades. These models rely on the assumption that mortality dynamics can be captured by a linear drift in a latent time index, and that coherent populations share a common trend from which individual deviations are stationary and mean-reverting. While mathematically elegant and computationally tractable, these assumptions are increasingly strained by demographic reality. The mortality improvement deceleration observed across high-income countries since approximately 2011 represents a structural shift that linear models cannot capture without ad-hoc modifications.
+
+The emergence of actuarial machine learning, pioneered by W\"uthrich and Merz \cite{wuthrich2021statistical, wuthrich2023}, has opened a path to address these non-linearities. Recent contributions by Richman and W\"uthrich \cite{richman2021}, Perla et al.\ \cite{perla2021}, and Nigri et al.\ \cite{nigri2019} have demonstrated that neural architectures --- particularly Long Short-Term Memory (LSTM) networks --- can extend classical actuarial decompositions and capture temporal dependencies that linear models miss. However, the adoption of neural models in regulated environments has been hindered by a fundamental tension: the flexibility that makes neural networks powerful also makes them opaque, and regulators (FINMA, EIOPA) require structural guarantees that a black-box model cannot easily provide.
+
+\subsection{The Gap: From Post-Hoc Validation to Embedded Constraints}
+
+In a companion paper \cite{rindori2026p04}, we introduced Hybrid-Lift, a neural-actuarial framework that combines a Hierarchical LSTM with Mean-Bias Correction (MBC) for multi-population mortality forecasting. That work demonstrated selective superiority over Li-Lee ($+17.4\%$ RMSE improvement in Sweden, $+12.6\%$ in West Germany) with a comprehensive governance suite including SHAP-based explainability and regulatory capital calibration. However, it left three significant gaps:
+
+\begin{enumerate}
+    \item \textbf{Constraints were verified post-hoc, not embedded in training.} The biological consistency of projections (Gompertz monotonicity, coherence) was checked after the fact. A model that ``happens to pass'' an audit is less defensible than one that is ``designed to comply.''
+    \item \textbf{Only both-sexes-combined mortality was modeled.} Life \& Health products --- annuities, pension buy-outs, longevity swaps --- require sex-specific projections. Male and Female mortality follow different trajectories with different improvement rates, and aggregating them masks important dynamics.
+    \item \textbf{Process noise calibration included double-counting.} The dual uncertainty framework added historical Li-Lee variability on top of the LSTM's stochastic predictions, counting the ``predictable'' component of variability twice. This inflated confidence intervals and distorted regulatory capital estimates.
+\end{enumerate}
+
+This paper addresses all three gaps by introducing \textit{Actuarial-Informed Neural Networks} (AINN), inspired by the Physics-Informed Neural Networks (PINN) paradigm \cite{raissi2019pinn}. The key conceptual shift is that actuarial constraints should not be binary (present or absent) but \textit{parametric}: the constraint intensity $\lambda$ is a continuous variable that the risk manager tunes based on the regulatory context. This framing yields the paper's central result --- a quantified governance-accuracy trade-off that no classical actuarial model and no unconstrained neural network can provide.
+
+\subsection{Related Work}
+
+The intersection of actuarial science and deep learning has generated a rich and rapidly growing literature. We situate our contribution within three streams.
+
+\textbf{Neural mortality modeling.} Richman and W\"uthrich \cite{richman2021} proposed a feed-forward network for Lee-Carter parameter estimation, demonstrating that neural architectures can replicate and extend classical decompositions. Perla et al.\ \cite{perla2021} introduced a recurrent framework for multi-population mortality, showing that LSTMs can capture cross-country dependencies without explicit factor decomposition. Nigri et al.\ \cite{nigri2019} applied deep learning to single-population forecasting. Robben, Antonio, and Kleinow \cite{robben2025} developed advanced statistical methods for fine-grained mortality data. Our work builds upon these contributions but differs in embedding domain constraints directly in the training loss, producing sex-specific projections from a single model, and providing a systematic parametric study of constraint intensity.
+
+\textbf{Physics-Informed Neural Networks.} Raissi, Perdikaris, and Karniadakis \cite{raissi2019pinn} introduced the PINN paradigm, where known physical laws are encoded as differentiable penalty terms in the neural network loss function. This approach has been transformative in computational physics but has not been systematically applied to actuarial science. The AINN framework adapts this paradigm by replacing physical laws with actuarial principles: Li-Lee coherence and temporal monotonicity become soft constraints that guide the learning process without rigidly constraining it.
+
+\textbf{Actuarial model governance.} The regulatory landscape under SST \cite{swissre2022} and Solvency II requires that internal models be explainable, robust, and validated against classical benchmarks. W\"uthrich \cite{wuthrich2021statistical} has advocated for ``actuarial learning'' --- the integration of statistical learning with actuarial structure. Mayer, Meier, and W\"uthrich \cite{shapforactuaries2023} demonstrated the application of SHAP to actuarial models. The AINN framework operationalizes this vision by providing a parametric continuum between the fully constrained actuarial world and the fully unconstrained ML world.
+
+\subsection{Contributions and Paper Structure}
+
+This paper makes four contributions:
+\begin{enumerate}
+    \item \textbf{Constrained Loss Function with Quantified Trade-Off.} Differentiable penalties for Li-Lee coherence and temporal monotonicity embedded in the LSTM training loss. A systematic intensity analysis across five $\lambda$ levels reveals a ``free lunch'' at $\lambda = 0.01$ (CI $-6.5\%$, RMSE $-0.03\%$) and a governance-accuracy trade-off at $\lambda = 0.1$ (CI $-25\%$, RMSE $+0.84\%$).
+    \item \textbf{Residual-Calibrated Process Noise.} Walk-forward residuals replace historical variability, reducing 95\% CI by 53--60\%.
+    \item \textbf{Sex-Specific Joint Training with Ensemble.} A single LSTM on joint M/F data, doubled sample size, 5-seed ensemble (CV 1.06\%).
+    \item \textbf{Time-Varying Credibility MBC.} $Z(t) = e^{-\alpha t}$ connects to B\"uhlmann credibility theory \cite{buhlmann1967}.
+\end{enumerate}
+
+The paper proceeds as follows. Section 2 describes the data, cluster, and sex-specific Li-Lee decomposition. Section 3 presents the methodology. Section 4 reports results (constraint trade-off, projections, benchmark, backtest, XAI, SCR). Section 5 discusses implications and limitations.
+
+\section{Data and Cluster Selection}
+
+\subsection{The Frontier Mortality Cluster}
+
+We use the same cluster as \cite{rindori2026p04}: CHE, SWE, NOR, DEUTW, NLD, JPN, from the Human Mortality Database \cite{hmd2023} for 1956--2020. Unlike the companion paper, we extract separate Male and Female mortality matrices $m_{x,t,i,s}$ for ages $x \in [0, 90]$, years $t \in [1956, 2020]$, countries $i$, and sex $s \in \{M, F\}$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{figures/fig01_log_mortality_age65_sex_comparison.png}
+    \caption{Log-mortality at age 65 by sex across the frontier cluster (1956--2020). Male mortality shows steeper improvement and higher volatility than Female.}
+    \label{fig:age65}
+\end{figure}
+
+\subsection{Sex-Specific Li-Lee Decomposition}
+
+The Li-Lee model is applied independently per sex:
+\begin{equation}\label{eq:lilee}
+    y_{x,t,i,s} = \alpha_{x,i,s} + B_{x,s} K_{t,s} + b_{x,i,s} k_{t,i,s} + \varepsilon_{x,t,i,s}
+\end{equation}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{figures/fig05_li_lee_common_factor_sex.png}
+    \caption{Li-Lee common mortality index $K_{t,s}$ by sex. The Male trend declines more steeply, consistent with male mortality convergence.}
+    \label{fig:common_kt}
+\end{figure}
+
+\subsection{Sex-Dependent Stationarity: A Novel Finding}
+
+The Li-Lee framework requires stationary country-specific factors. In \cite{rindori2026p04}, we identified a ``stationarity paradox'' in the combined analysis. The sex-specific decomposition reveals a fundamentally different landscape (Table \ref{tab:stationarity}).
+
+\begin{table}[H]
+\centering
+\caption{Stationarity Analysis: Combined vs.\ Sex-Specific}
+\label{tab:stationarity}
+\begin{tabular}{@{}llll@{}}
+\toprule
+Country & Combined \cite{rindori2026p04} & Male & Female \\ \midrule
+Switzerland  & Conflict       & \textbf{Stationary} & Conflict \\
+Sweden       & \textbf{Unit Root} & \textbf{Stationary} & \textbf{Stationary} \\
+Norway       & Stationary     & Conflict            & Conflict \\
+West Germany & Unit Root      & Unit Root           & Unit Root \\
+Netherlands  & Unit Root      & Unit Root           & Unit Root \\
+Japan        & Conflict       & Conflict            & Conflict \\ \bottomrule
+\end{tabular}
+\end{table}
+
+Switzerland Male is clearly stationary, and Sweden --- classified as unit root in the combined analysis --- is now stationary for both sexes. This suggests that aggregation can introduce spurious non-stationarity.
+
+\section{Methodology}
+
+\subsection{The AINN Constrained Loss Function}
+
+\begin{equation}\label{eq:ainn_loss}
+    \mathcal{L} = \underbrace{\frac{1}{N}\sum_{n} \| \mathbf{y}_n - \hat{\mathbf{y}}_n \|^2}_{\mathcal{L}_{\text{MSE}}} + \lambda_1 \underbrace{\frac{1}{6}\sum_{i=1}^{6} (\hat{\Delta k}_{t,i})^2}_{\mathcal{L}_{\text{coherence}}} + \lambda_2 \underbrace{\text{mean}\big(\text{ReLU}(\hat{\Delta K}_t)^2\big)}_{\mathcal{L}_{\text{monotonicity}}}
+\end{equation}
+
+The \textit{coherence penalty} discourages divergence of country-specific factors (Li-Lee assumption as soft regularizer). The \textit{monotonicity penalty} discourages mortality worsening (biological prior for developed countries). A stationarity penalty was tested and excluded: it worsened RMSE ($+0.8\%$ to $+7.9\%$), consistent with 4/6 countries having non-stationary factors.
+
+\subsection{Joint Male/Female Training}
+
+A single LSTM on concatenated M/F sequences with binary sex indicator as 8th feature. Doubles sample size (45$\to$90). Reduces RMSE by 2.4\% vs separate models.
+
+\subsection{Architecture and Optimization}
+
+Stacked LSTM: $\text{Input}(15, 8) \to \text{LSTM}(48) \to \text{Dropout}(0.2) \to \text{LSTM}(32) \to \text{Dropout}(0.2) \to \text{Dense}(8)$.
+
+Six-dimensional joint optimization via Optuna TPE \cite{optuna2019} (100 trials, 48 min on M1 Pro). Champion: lb=15, (48,32), lr=0.001, $\lambda_1 = \lambda_2 = 0.001$, RMSE=6.1725.
+
+Key finding: lookback-architecture interaction. Optimal architecture shifts from 64$\to$8 (lb=10) to 48$\to$32 (lb=15), suggesting co-optimization is necessary.
+
+\subsection{5-Seed Ensemble}
+
+Five models (seeds: 42, 77, 256, 512, 1024), predictions averaged in scaled space. CV = 1.06\%.
+
+\subsection{Residual-Calibrated Process Noise}
+
+Process noise $\sigma$ calibrated on walk-forward residuals (49 predictions, \texttt{training=False}):
+\begin{equation}
+    \sigma_{\text{residual}} = \text{std}(\Delta K_t^{\text{obs}} - \Delta K_t^{\text{pred}})
+\end{equation}
+
+$\sigma_{K_t}$ Male: 5.99 $\to$ 2.80 ($-53\%$). Female: 9.08 $\to$ 3.64 ($-60\%$).
+
+\subsection{Observation-Anchored e$_0$ with Isotonic Gompertz}
+
+\begin{equation}
+    \ln(\hat{m}_{x,t,i,s}) = \ln(m_{x,2020,i,s})^{\text{obs}} + B_{x,s} \sum_{\tau=2021}^{t} \Delta \hat{K}_{\tau,s}
+\end{equation}
+
+Isotonic regression on ages 40--90 corrects data-inherited Gompertz violations.
+
+\subsection{Time-Varying Credibility MBC}
+
+\begin{equation}
+    \hat{\Delta}_t = Z(t) \cdot \hat{\Delta}_t^{\text{LSTM}} + (1 - Z(t)) \cdot \mu_{\text{Li-Lee}}, \quad Z(t) = e^{-\alpha t}
+\end{equation}
+
+Connects to B\"uhlmann credibility theory \cite{buhlmann1967}. Parameter $\alpha$ interpretable as practitioner confidence in neural extrapolation.
+
+\section{Results}
+
+\subsection{Ablation Studies}
+
+\begin{table}[H]
+\centering
+\caption{Ablation Summary: Hierarchy of Design Contributions}
+\label{tab:ablation}
+\begin{tabular}{@{}lr@{}}
+\toprule
+Design Choice & RMSE \\ \midrule
+Separate M/F, fixed 32-16, lb=10 & 7.77 \\
++ Joint M/F ($+2.4\%$) & 7.59 \\
++ Architecture tuning ($+6.5\%$) & 7.07 \\
++ Lookback lb=15 ($+12.7\%$) & 6.17 \\
++ Constraints $\lambda = 0.001$ ($-0.009\%$) & 6.17 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Lookback matters more than architecture ($+12.7\%$ vs $+6.5\%$). Constraints neutral on RMSE --- their value is in forecast stability (Section 4.2).
+
+\subsection{Constraint Intensity Trade-Off}
+
+\begin{table}[H]
+\centering
+\caption{Constraint Intensity Experiment (CHE, corrected $\sigma$)}
+\label{tab:constraint}
+\begin{tabular}{@{}rrrrrr@{}}
+\toprule
+$\lambda_{\text{mono}}$ & RMSE (cost) & frac($\Delta K_t > 0$) & CI$_M$ & CI$_F$ & CI Red. \\ \midrule
+0.0    & 6.173 (----)  & 55.6\% & 3.64 & 3.11 & ---    \\
+0.001  & 6.173 ($-$0.01\%) & 55.6\% & 3.62 & 3.10 & $-$0.4\%  \\
+0.01   & 6.171 ($-$0.03\%) & 55.6\% & 3.40 & 3.03 & $-$6.5\%  \\
+0.1    & 6.225 ($+$0.84\%) & 44.4\% & 2.70 & 2.43 & $-$25.7\% \\
+1.0    & 6.315 ($+$2.29\%) & 27.8\% & 1.93 & 1.71 & $-$46.8\% \\ \bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{figures/fig21_constraint_intensity_experiment.png}
+    \caption{Constraint intensity trade-off across four metrics. The ``sweet spot'' at $\lambda = 0.1$ reduces CI by 25\% at only $+0.84\%$ RMSE.}
+    \label{fig:constraint}
+\end{figure}
+
+This maps to an actuarial model suite: Best Estimate ($\lambda = 0.001$), Prudent Estimate ($\lambda = 0.1$), Stress Scenario ($\lambda = 1.0$).
+
+\subsection{Stochastic Life Expectancy Projections}
+
+\begin{table}[H]
+\centering
+\caption{Ensemble Projections 2020--2050 ($\lambda = 0.001$, corrected $\sigma$)}
+\label{tab:e0}
+\begin{tabular}{@{}llrrrr@{}}
+\toprule
+Country & Sex & $e_0$(2020) & $e_0$(2050) & CI Width & Gain \\ \midrule
+Switzerland & M & 80.26 & 82.06 & 3.69 & +1.80 \\
+Switzerland & F & 83.58 & 85.55 & 3.03 & +1.96 \\
+W.\ Germany & M & 78.28 & 80.35 & 4.28 & +2.06 \\
+W.\ Germany & F & 82.20 & 84.48 & 3.55 & +2.27 \\
+Japan       & M & 80.44 & 82.22 & 3.67 & +1.78 \\
+Japan       & F & 84.89 & 86.53 & 2.52 & +1.64 \\ \bottomrule
+\end{tabular}
+\footnotesize{Selected countries. Full 6-country $\times$ 2-sex results available in the codebase.}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{figures/fig10_kt_fan_chart_sex.png}
+    \caption{Stochastic $K_t$ fan charts for Male and Female (2020--2050).}
+    \label{fig:fanchart}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{figures/fig11_e0_convergence_sex.png}
+    \caption{Life expectancy convergence across the cluster. West Germany shows the steepest improvement (``catch-up'' effect).}
+    \label{fig:convergence}
+\end{figure}
+
+\subsection{Benchmark: AINN vs Li-Lee RWD}
+
+\begin{table}[H]
+\centering
+\caption{AINN vs Li-Lee --- Switzerland at 2050}
+\label{tab:benchmark}
+\begin{tabular}{@{}llrrrr@{}}
+\toprule
+Sex & Model & $e_0$(2050) & Gain & CI Width & SCR \\ \midrule
+M & Li-Lee & 83.54 & +3.28 & 3.73 & +2.091 \\
+M & AINN   & 82.06 & +1.80 & 3.69 & +1.907 \\
+F & Li-Lee & 86.05 & +2.47 & 4.71 & +2.178 \\
+F & AINN   & 85.55 & +1.96 & 3.03 & +1.516 \\ \bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{figures/fig22_ainn_vs_lilee_che.png}
+    \caption{Switzerland $e_0$: AINN (colored) vs Li-Lee RWD (grey). The AINN captures the post-2011 deceleration, producing more conservative projections with tighter CI.}
+    \label{fig:benchmark}
+\end{figure}
+
+\subsection{10-Year Out-of-Sample Backtest}
+
+The AINN is trained on 1956--2010 only and forecasts 2011--2020, including the post-2011 deceleration and the 2020 COVID shock.
+
+\begin{table}[H]
+\centering
+\caption{Backtest: Predicted vs Observed $e_0$ at 2020 (Selected)}
+\label{tab:backtest}
+\begin{tabular}{@{}llrrrll@{}}
+\toprule
+Country & Sex & Obs & AINN & Li-Lee & AINN Err & In CI \\ \midrule
+CHE & M & 80.26 & 80.52 & 80.51 & $+$0.26 & YES \\
+CHE & F & 83.58 & 83.84 & 84.04 & $+$0.26 & YES \\
+NOR & M & 80.58 & 79.56 & 79.54 & $-$1.02 & NO \\
+JPN & F & 84.89 & 84.78 & 84.95 & $-$0.11 & YES \\ \bottomrule
+\end{tabular}
+\footnotesize{Full: AINN MAE=0.379, Li-Lee MAE=0.427. AINN wins 6/12. 11/12 in 90\% CI.}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{figures/fig23_backtest_10yr_che.png}
+    \caption{Backtest: CHE $e_0$ predicted vs observed (red circles). Both models capture the trend; the AINN's narrower CI is visible for females.}
+    \label{fig:backtest}
+\end{figure}
+
+\subsection{Explainability and Governance}
+
+\textbf{Temporal saliency}: importance distributed across the 15-year window (Male peak t-3: 9.9\%, Female t-4: 10.2\%), no pathological concentration.
+
+\textbf{SHAP}: distributed cross-country hierarchy for CHE Male (NLD: 0.063, JPN: 0.040, SWE: 0.038, CHE: 0.037).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{figures/fig14_shap_influence_mapping.png}
+    \caption{SHAP influence ranking for Swiss Male mortality.}
+    \label{fig:shap}
+\end{figure}
+
+\textbf{Gompertz audit}: structurally compliant. Violations ($< 0.001$) inherited from HMD data, corrected by isotonic regression in financial outputs.
+
+\textbf{Lexis maps}: uniform vertical gradient, no cohort artefacts (Figure \ref{fig:lexis}).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{figures/fig17_lexis_residual_maps.png}
+    \caption{Lexis residual maps (ages 40--90, CHE). Smooth age-proportional shifts confirm no cohort artefacts.}
+    \label{fig:lexis}
+\end{figure}
+
+\subsection{Regulatory Capital}
+
+\begin{table}[H]
+\centering
+\caption{SCR (ES 99.0\%, SST) --- Full Cluster}
+\label{tab:scr}
+\begin{tabular}{@{}lrr@{}}
+\toprule
+Country & Male & Female \\ \midrule
+Switzerland  & +1.907 & +1.516 \\
+Sweden       & +1.942 & +1.649 \\
+Norway       & +1.852 & +1.580 \\
+W.\ Germany  & +2.245 & +1.800 \\
+Netherlands  & +2.063 & +1.849 \\
+Japan        & +1.902 & +1.243 \\ \bottomrule
+\end{tabular}
+\end{table}
+
+Reverse stress test: $\delta^* = 23.0\%$ (CHE Male). Model-based stress test: amplification 1.02$\times$ --- STABLE.
+
+\subsection{Credibility-Weighted MBC}
+
+\begin{table}[H]
+\centering
+\caption{Credibility $Z(t) = e^{-\alpha t}$: Effect on CHE}
+\label{tab:credibility}
+\begin{tabular}{@{}rrrrrrr@{}}
+\toprule
+$\alpha$ & $Z$(2025) & $Z$(2035) & $Z$(2050) & M Med & F Med & M CI \\ \midrule
+0.0  & 1.000 & 1.000 & 1.000 & 82.06 & 85.55 & 3.69 \\
+0.02 & 0.905 & 0.741 & 0.549 & 81.69 & 85.14 & 2.89 \\
+0.05 & 0.779 & 0.472 & 0.223 & 81.26 & 84.73 & 2.16 \\
+0.10 & 0.607 & 0.223 & 0.050 & 80.90 & 84.33 & 1.81 \\
+0.20 & 0.368 & 0.050 & 0.002 & 80.63 & 83.98 & 1.35 \\ \bottomrule
+\end{tabular}
+\end{table}
+
+Together, $(\lambda, \alpha)$ define a 2D governance space: from pure LSTM ($\lambda \to 0, \alpha = 0$) to pure Li-Lee ($\lambda \to \infty, \alpha \to \infty$).
+
+\section{Discussion}
+
+\subsection{The Constraint as a Governance Dial}
+
+The AINN's primary contribution is making explicit a trade-off hidden in both classical and neural models. Li-Lee hardcodes constraints (stationarity assumed, not tunable). An unconstrained LSTM has no structural bias. The AINN offers a parametric continuum. The disconnect between one-step RMSE (Optuna's target) and multi-step stability (the regulatory use case) is a general finding: structural constraints in recursive neural forecasting should be evaluated on the target horizon.
+
+\subsection{Residual-Calibrated Uncertainty}
+
+The 53--60\% $\sigma$ reduction is the largest single improvement. It demonstrates that in dual uncertainty frameworks, aleatoric calibration dominates CI width more than architecture, constraint, or ensemble. This generalizes: any neural mortality model using additive process noise should calibrate on residuals.
+
+\subsection{Honest Assessment}
+
+The 10-year backtest shows the AINN does not dramatically outperform Li-Lee on point accuracy (MAE 0.379 vs 0.427). The advantage is in uncertainty calibration, not prediction. For point-estimate-only applications, the AINN's complexity may not be justified. For regulatory applications where CI width affects capital, the improvement is meaningful --- particularly for females (CI 36\% narrower).
+
+\subsection{Limitations}
+
+\textbf{Constraint at champion $\lambda$}: near-zero effect. The trade-off emerges only through post-hoc analysis. A multi-step loss would provide principled $\lambda$ selection.
+
+\textbf{Temporal monotonicity surrogate}: $\text{ReLU}(\Delta K_t)^2$ is not the true Gompertz ($m_{x+1} \geq m_x$). True age-monotonicity in the loss requires differentiable back-transformation --- left to future work.
+
+\textbf{Credibility $\alpha$}: no data-driven calibration. Could be derived from rolling forecast variance.
+
+\textbf{Small dataset}: 80 training sequences. Fundamental to mortality modeling; cannot be resolved without synthetic augmentation.
+
+\textbf{Aggregation artefact}: sex-specific decomposition changes stationarity classifications, nuancing the motivating narrative from \cite{rindori2026p04}.
+
+\subsection{Future Work}
+
+Multi-step training objective for principled $\lambda$ selection. Fat-tailed process noise (Student-$t$). True Gompertzian constraints in the loss. Self-calibrating credibility $\alpha(t)$. Cohort effects via diagonal input features.
+
+\section{Conclusion}
+
+This paper introduces AINN, a constrained deep learning framework where the constraint intensity $\lambda$ is a parametric governance dial. The constraint intensity analysis reveals a disconnect between one-step accuracy and multi-step stability --- at $\lambda = 0.01$ the constraint is free; at $\lambda = 0.1$ it offers 25\% CI reduction at negligible cost.
+
+Three additional contributions complete the framework: residual-calibrated $\sigma$ ($-$53--60\% CI), 5-seed ensemble (CV 1.06\%), and credibility MBC (B\"uhlmann connection). Together, these produce a regulatory-grade model suite validated by a 10-year backtest on real data.
+
+The AINN does not replace classical models. It extends them with tunable constraints and calibrated uncertainty --- filling the gap between Li-Lee and standard neural networks in a regulatory environment where governance matters as much as accuracy.
+
+\section*{Acknowledgements}
+The author thanks Riccardo Turin (Swiss Re, L\&H Risk Modeling) for feedback on \cite{rindori2026p04} that informed this work.
+
+\newpage
+\bibliographystyle{unsrt}
+\bibliography{references}
+
+\end{document}

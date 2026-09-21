@@ -1,0 +1,16 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# macOS system files
+.DS_Store
+
+# Data files (Non carichiamo i CSV grezzi per privacy/peso)
+data/*.csv
+data/*.parquet
+
+# Environment
+.env

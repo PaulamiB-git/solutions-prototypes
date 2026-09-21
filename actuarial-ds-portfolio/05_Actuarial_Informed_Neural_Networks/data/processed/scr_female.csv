@@ -1,0 +1,7 @@
+Country,Code,Median e0 (2050),VaR 99.5%,ES 99.0%,SCR (VaR),SCR (ES)
+Switzerland,CHE,85.55,87.04,87.06,1.489,1.516
+Sweden,SWE,85.01,86.63,86.66,1.62,1.649
+Norway,NOR,85.28,86.83,86.86,1.552,1.58
+West Germany,DEUTW,84.48,86.24,86.28,1.768,1.8
+Netherlands,NLD,84.29,86.1,86.14,1.816,1.849
+Japan,JPN,86.53,87.75,87.78,1.221,1.243

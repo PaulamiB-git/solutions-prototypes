@@ -1,0 +1,14 @@
+# Project 05: Actuarial-Informed Neural Networks
+# Pinned dependencies for reproducibility
+
+numpy==1.26.4
+pandas==2.2.1
+scipy==1.12.0
+matplotlib==3.8.3
+seaborn==0.13.2
+tensorflow==2.16.1
+keras-tuner==1.4.7
+scikit-learn==1.4.1
+shap==0.45.0
+statsmodels==0.14.1
+optuna==3.6.1

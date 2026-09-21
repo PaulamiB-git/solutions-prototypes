@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+
+# Project Specific
+# We exclude raw HMD data for licensing and performance reasons
+data/raw/*.txt
+data/raw/*.csv
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Reports/Figures - We keep these for GitHub visualization
+
+# LaTeX Paper (managed on Overleaf)
+latex/
+
+# Internal planning document
+ROADMAP.md
+
+# Internal working notes
+INTERNAL_NOTES.md

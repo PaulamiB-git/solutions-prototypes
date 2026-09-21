@@ -1,0 +1,7 @@
+Design Choice,RMSE,vs Champion
+"Separate M/F, fixed arch 32-16, lb=10",7.7705,-25.89%
+"Joint M/F, fixed arch 32-16, lb=10, unconstrained",7.5851,-22.88%
+"Joint M/F, fixed arch 32-16, lb=10, constrained",7.5817,-22.83%
+"Joint M/F, tuned arch (Keras Tuner lb=10)",7.0687,-14.52%
+"Joint M/F, Optuna 6D (lb=15, 48-32, lr=0.001), unconstrained",6.1719852812278,+0.01%
+"Joint M/F, Optuna 6D (lb=15, 48-32, lr=0.001), CHAMPION",6.172524718464667,+0.00%

@@ -1,0 +1,13 @@
+Country,Sex,Obs 2010,Obs 2020,AINN Med,LL Med,AINN Err,LL Err,AINN in 90%CI,LL in 90%CI
+Switzerland,Male,79.33,80.26,80.52,80.51,+0.26,+0.24,YES,YES
+Switzerland,Female,82.92,83.58,83.84,84.04,+0.26,+0.46,YES,YES
+Sweden,Male,78.92,79.94,80.12,80.1,+0.18,+0.17,YES,YES
+Sweden,Female,82.23,82.93,83.2,83.41,+0.27,+0.48,YES,YES
+Norway,Male,78.3,80.58,79.56,79.54,-1.02,-1.04,NO,NO
+Norway,Female,81.9,83.27,82.9,83.11,-0.38,-0.16,YES,YES
+West Germany,Male,77.16,78.28,78.53,78.51,+0.24,+0.22,YES,YES
+West Germany,Female,81.57,82.2,82.59,82.82,+0.39,+0.62,YES,YES
+Netherlands,Male,78.25,79.14,79.51,79.5,+0.37,+0.36,YES,YES
+Netherlands,Female,81.55,81.96,82.58,82.81,+0.62,+0.85,YES,YES
+Japan,Male,78.74,80.44,79.99,79.97,-0.45,-0.47,YES,YES
+Japan,Female,83.96,84.89,84.78,84.95,-0.11,+0.06,YES,YES

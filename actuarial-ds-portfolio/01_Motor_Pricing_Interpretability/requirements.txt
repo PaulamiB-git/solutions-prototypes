@@ -1,0 +1,13 @@
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+xgboost
+shap
+tensorflow-macos; sys_platform == 'darwin' and platform_machine == 'arm64'
+tensorflow-metal; sys_platform == 'darwin' and platform_machine == 'arm64'
+tensorflow; sys_platform != 'darwin' or platform_machine != 'arm64'
+scikeras
+visualkeras
+pillow

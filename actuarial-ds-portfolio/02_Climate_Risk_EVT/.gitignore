@@ -1,0 +1,10 @@
+# Data files (ERA5 NetCDF files are too large for GitHub)
+data/*.nc
+
+# Python/Jupyter
+__pycache__/
+.ipynb_checkpoints/
+*.py[cod]
+
+# OS specific
+.DS_Store

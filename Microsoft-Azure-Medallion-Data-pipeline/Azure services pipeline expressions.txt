@@ -1,0 +1,18 @@
+# Expression for directing the output from lookup table to ForEach step in the pipeline
+@activity('Lookup for tables').output.value
+
+# Expression for querying each item and creating a query using dynamic content
+@{concat('SELECT * FROM ', item().SchemaName,'.', item().TableName)}
+
+# Expression for identifying the schemaName and tableName from each item
+@item().SchemaName
+@item().TableName
+
+#Expression to create the structure of our storage account
+@{concat(dataset().schemaname, '/',dataset().tablename)}
+
+#Expression to create the structure of our storage account
+@{concat(dataset().tablename, '.parquet')}
+
+# Expression to forward childitems to ForEach activity to create SQL views
+@activity('get table names').output.childItems

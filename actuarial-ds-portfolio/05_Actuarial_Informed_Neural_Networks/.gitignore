@@ -1,0 +1,28 @@
+# Data (raw HMD files)
+data/raw/*.txt
+
+# Model checkpoints (large binary files)
+models/*.h5
+models/*.keras
+models/*.pkl
+models/tuning/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
+
+# LaTeX build artifacts
+latex/*.aux
+latex/*.log
+latex/*.out
+latex/*.bbl
+latex/*.blg
+latex/*.synctex.gz
+latex/*.fdb_latexmk
+latex/*.fls
