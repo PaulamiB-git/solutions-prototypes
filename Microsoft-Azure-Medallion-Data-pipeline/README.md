@@ -25,7 +25,7 @@ The architecture (Data flow) used in this project uses different Azure functiona
 
 With the combination of Azure Datalake and Azure Databricks, we can create a lakehouse architecture that follows three layer of data processing: 
 
-* Bronze Layer - This is the exact copy of the data source, in its raw form. All the tables (relational model) or any unstructured data (Non-relational model) is stored in this layer. No transformations are done.
+* Bronze Layer -  This is the exact copy of the data source, in its raw form. All the tables (relational model) or any unstructured data (Non-relational model) is stored in this layer. No transformations are done.
 * Silver Layer - In this step, soft data transformations are performed such as fixing data types, column names, date formats, etc. to a standardized format and store in a more structured way.
 * Gold Layer - This layer is the cleanest form of data that can be used for downstream tasks. Number of other things could also be implemented at this stage like business rules, conformity checks, etc.
 
