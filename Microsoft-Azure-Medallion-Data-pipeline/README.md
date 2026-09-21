@@ -46,7 +46,7 @@ The dataset is an open source database provided by Microsoft namely 'AdventureWo
   Since, the database is located in an on-premises SQL Server, Microsoft Azure needs a way to detect the stored data and able to interact with it.
 
   <p align="center">
-  <img width="400" height="150" src="https://github.com/PaulamiB-git/solutions-prototypes/blob/master/Microsoft-Azure-Medallion-Data-pipeline/images/2.jpg">
+  <img width="400" height="150" src="https://github.com/PaulamiB-git/solutions-prototypes/blob/master/Microsoft-Azure-Medallion-Data-pipeline/images/2.png">
   <h6 align = "center" > Source: Author </h6>
 </p>
 
@@ -55,14 +55,14 @@ The dataset is an open source database provided by Microsoft namely 'AdventureWo
   To actualize that, the first step includes creating a Self Hosted Integration Runtime (SHIR) linked service and install it on the physical machine where the server is deployed. 
 
 <p align="center">
-  <img width="500" height="350" src="https://github.com/PaulamiB-git/solutions-prototypes/blob/master/Microsoft-Azure-Medallion-Data-pipeline/images/3.jpg">
+  <img width="500" height="350" src="https://github.com/PaulamiB-git/solutions-prototypes/blob/master/Microsoft-Azure-Medallion-Data-pipeline/images/3.png">
   <h6 align = "center" > Source: Author </h6>
 </p>
 
 Start the installed integration runtime and ADF is ready to be integrated with On-prem SQL Server Database. Create a new pipeline in ADF to copy data from SQL Server to Azure Data Lake Storage Gen2. It is important to select the Source and Sink properties to define the correct data flow. The pipeline consists of two parts, firstly, the lookup table that will query the name and schema of each table stored in the SQL Server Database. Secondly, creating a ForEach element that runs a for-loop through the output of lookup table activity and store it in bronze storage layer which is exact copy of the SQL database. The folder structure is supposed to look like Layer/Schema/TableName/TableName.parquet.
 
 <p align="center">
-  <img width="400" height="250" src="https://github.com/PaulamiB-git/solutions-prototypes/blob/master/Microsoft-Azure-Medallion-Data-pipeline/images/4.jpg">
+  <img width="400" height="250" src="https://github.com/PaulamiB-git/solutions-prototypes/blob/master/Microsoft-Azure-Medallion-Data-pipeline/images/4.png">
   <h6 align = "center" > Source: Author </h6>
 </p>
 
@@ -71,7 +71,7 @@ Start the installed integration runtime and ADF is ready to be integrated with O
 
 
 <p align="center">
-  <img width="400" height="150" src="https://github.com/PaulamiB-git/solutions-prototypes/blob/master/Microsoft-Azure-Medallion-Data-pipeline/images/5.jpg">
+  <img width="400" height="150" src="https://github.com/PaulamiB-git/solutions-prototypes/blob/master/Microsoft-Azure-Medallion-Data-pipeline/images/5.png">
   <h6 align = "center" > Source: Author </h6>
 </p>
 
@@ -82,14 +82,14 @@ Start the installed integration runtime and ADF is ready to be integrated with O
   The data is ever increasing and we need a way to automate the data ingestion and transformation processes as much as possible.
 
   <p align="center">
-  <img width="400" height="150" src="https://github.com/PaulamiB-git/solutions-prototypes/blob/master/Microsoft-Azure-Medallion-Data-pipeline/images/6.jpg">
+  <img width="400" height="150" src="https://github.com/PaulamiB-git/solutions-prototypes/blob/master/Microsoft-Azure-Medallion-Data-pipeline/images/6.png">
   <h6 align = "center" > Source: Author </h6>
 </p>
 
 In this step, we will be connecting Azure Databricks to create data pipeline that will be triggered automatically whenever there is new data. Similar to step 1, we will create two new Databricks notebook activities following the data ingestion part, i.e bronze to silver and silver to gold. Connect the output of ForEach activity to bronze to silver notebook.
 
 <p align="center">
-  <img width="900" height="250" src="https://github.com/PaulamiB-git/solutions-prototypes/blob/master/Microsoft-Azure-Medallion-Data-pipeline/images/7.jpg">
+  <img width="900" height="250" src="https://github.com/PaulamiB-git/solutions-prototypes/blob/master/Microsoft-Azure-Medallion-Data-pipeline/images/7.png">
   <h6 align = "center" > Source: Author </h6>
 </p>
 
@@ -100,7 +100,7 @@ The outpur from bronze to silver layer goes to silver to gold layer where the fi
   Azure Synapse Analytics is built on top of Azure Data Factory, so many options can be found in the Synapse Analytics. In Azure Synapse Analytics, we can create databases which is not available in ADF.
 
 <p align="center">
-  <img width="400" height="150" src="https://github.com/PaulamiB-git/solutions-prototypes/blob/master/Microsoft-Azure-Medallion-Data-pipeline/images/8.jpg">
+  <img width="400" height="150" src="https://github.com/PaulamiB-git/solutions-prototypes/blob/master/Microsoft-Azure-Medallion-Data-pipeline/images/8.png">
   <h6 align = "center" > Source: Author </h6>
 </p>
 
@@ -108,7 +108,7 @@ The outpur from bronze to silver layer goes to silver to gold layer where the fi
 Azure Synapse Analytics could be thought of as the combination of both Azure Databricks and Azure Data Factory. Firstly we will create a Serverless Azure SQL Database to load the data into Azure Synapse Analytics. In serverless database, the data will already be available in the datalake, we will just be using the built-in SQL pool to directly query the gold data. Azure Synapse Analytics already has a link to Azure Data Lake Storage which will make the task even easier. We shall create a gold database view in serverless SQL database in order for us to query the data directly from Synapse workspace. Since the views are only referencing the data stored in datalake, any changes in datalake will also be reflected in Synapse database views. 
 
 <p align="center">
-  <img width="450" height="250" src="https://github.com/PaulamiB-git/solutions-prototypes/blob/master/Microsoft-Azure-Medallion-Data-pipeline/images/9.jpg">
+  <img width="450" height="250" src="https://github.com/PaulamiB-git/solutions-prototypes/blob/master/Microsoft-Azure-Medallion-Data-pipeline/images/9.png">
   <h6 align = "center" > Source: Author </h6>
 </p>
 
@@ -118,7 +118,7 @@ Now, we have completed the data loading part.
   The PowerBI desktop will be used and the data source will be marked as Azure Synapse Analytics SQL views.
 
 <p align="center">
-  <img width="400" height="150" src="https://github.com/PaulamiB-git/solutions-prototypes/blob/master/Microsoft-Azure-Medallion-Data-pipeline/images/10.jpg">
+  <img width="400" height="150" src="https://github.com/PaulamiB-git/solutions-prototypes/blob/master/Microsoft-Azure-Medallion-Data-pipeline/images/10.png">
   <h6 align = "center" > Source: Author </h6>
 </p>
 
@@ -126,7 +126,7 @@ PowerBI will load all the gold data views stored in Synapse Analytics. Below are
 
 
 <p align="center">
-  <img width="800" height="400" src="https://github.com/PaulamiB-git/solutions-prototypes/blob/master/Microsoft-Azure-Medallion-Data-pipeline/images/11.jpg">
+  <img width="800" height="400" src="https://github.com/PaulamiB-git/solutions-prototypes/blob/master/Microsoft-Azure-Medallion-Data-pipeline/images/11.png">
   <h6 align = "center" > Source: Author </h6>
 </p>
 
